@@ -1,6 +1,7 @@
 **/*.rs.bk
 **/*~
 /target/
+/target/*
 benchmarks/**/*.ll
 benchmarks/**/*.o
 

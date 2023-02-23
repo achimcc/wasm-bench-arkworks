@@ -45,7 +45,7 @@ jobs:
           --message-format json \
           | jq -r 'select(has("id"))| .id|=(gsub("\\s";"_")| sub("::";"/") | ascii_downcase)' \
           | criterion-table \
-          > criterion-template-results/BENCHMARKS-CRITERION-bls12_381.md
+          > criterion-template-results/BENCHMARKS-ARKWORKS-WASMTIME.md
       
       - name: Publish criterion results on GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
