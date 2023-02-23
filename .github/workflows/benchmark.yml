@@ -41,7 +41,7 @@ jobs:
 
       - name: Run benchmarks
         run: |
-          cargo +nightly bench \
+          cargo criterion \
           --message-format json \
           | jq -r 'select(has("id"))| .id|=(gsub("\\s";"_")| sub("::";"/") | ascii_downcase)' \
           | criterion-table \
