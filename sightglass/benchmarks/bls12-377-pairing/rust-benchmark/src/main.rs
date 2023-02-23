@@ -5,6 +5,6 @@ mod bls12_377;
 
 fn main() {
     bench::start();
-    let result = bls12_377::do_msm_g2(1000);
+    let result = bls12_377::do_pairing();
     bench::end();
 }
