@@ -39,6 +39,9 @@ jobs:
       - name: mkdir
         run: mkdir criterion-template-results
 
+      - name: build project
+        run: cargo build
+
       - name: Run benchmarks
         run: |
           cargo criterion \
