@@ -1,6 +1,6 @@
 use criterion::{criterion_group, criterion_main, Criterion};
 
-const BENCH_ROOT: &'static str = "sightglass/benchmarks-next/";
+const BENCH_ROOT: &'static str = "sightglass/benchmarks/";
 
 macro_rules! def_compile_bench {
     ($func:ident, $name:expr, $with_fuel:ident) => {
@@ -62,51 +62,27 @@ macro_rules! def_exec_bench {
 macro_rules! for_each_bench {
     ($mac:ident) => {
         $mac! {
-            @compile default compile_pulldown_cmark => pulldown_cmark
-            @compile with_fuel compile_pulldown_cmark_with_fuel => pulldown_cmark
-            @compile default compile_bz2 => bz2
-            @compile with_fuel compile_bz2_with_fuel => bz2
-            @compile default compile_shootout_base64 => shootout_base64
-            @compile with_fuel compile_shootout_base64_with_fuel => shootout_base64
-            @compile default compile_shootout_fib2 => shootout_fib2
-            @compile with_fuel compile_shootout_fib2_with_fuel => shootout_fib2
-            @compile default compile_shootout_heapsort => shootout_heapsort
-            @compile with_fuel compile_shootout_heapsort_with_fuel  => shootout_heapsort
-            @compile default compile_shootout_keccak => shootout_keccak
-            @compile with_fuel compile_shootout_keccak_with_fuel => shootout_keccak
-            @compile default compile_shootout_ed25519 => shootout_ed25519
-            @compile with_fuel compile_shootout_ed25519_with_fuel => shootout_ed25519
-            @compile default compile_shootout_random => shootout_random
-            @compile with_fuel compile_shootout_random_with_fuel => shootout_random
-            @compile default compile_shootout_minicsv => shootout_minicsv
-            @compile with_fuel compile_shootout_minicsv_with_fuel => shootout_minicsv
-            @compile default compile_shootout_matrix => shootout_matrix
-            @compile with_fuel compile_shootout_matrix_with_fuel => shootout_matrix
-            @compile default compile_shootout_ratelimit => shootout_ratelimit
-            @compile with_fuel compile_shootout_ratelimit_with_fuel => shootout_ratelimit
+            @compile default bls12_381_pairing => bls12_381_pairing
+            @compile with_fuel bls12_381_pairing_with_fuel => bls12_381_pairing
+            @compile default bls12_377_pairing => bls12_377_pairing
+            @compile with_fuel bls12_377_pairing_with_fuel => bls12_377_pairing
+            @compile default bw6_761_pairing => bw6_761_pairing
+            @compile with_fuel bw6_761_pairing_with_fuel => bw6_761_pairing
+            @compile default ed_on_bls12_381_mul_affine_sw => ed_on_bls12_381_mul_affine_sw
+            @compile with_fuel ed_on_bls12_381_mul_affine_sw_with_fuel => ed_on_bls12_381_mul_affine_sw
+            @compile default ed_on_bls12_377_mul_affine => ed_on_bls12_377_mul_affine
+            @compile with_fuel ed_on_bls12_377_mul_affine_with_fuel => ed_on_bls12_377_mul_affine
 
-            @exec default exec_shootout_ed25519 => shootout_ed25519
-            @exec with_fuel exec_shootout_ed25519_with_fuel => shootout_ed25519
-            @exec default exec_pulldown_cmark => pulldown_cmark
-            @exec with_fuel exec_pulldown_cmark_with_fuel => pulldown_cmark
-            @exec default exec_shootout_keccak => shootout_keccak
-            @exec with_fuel exec_shootout_keccak_with_fuel => shootout_keccak
-            // @exec default exec_shootout_heapsort => shootout_heapsort
-            // @exec with_fuel exec_shootout_heapsort_with_fuel => shootout_heapsort
-            @exec default exec_shootout_fib2 => shootout_fib2
-            @exec with_fuel exec_shootout_fib2_with_fuel => shootout_fib2
-            @exec default exec_shootout_base64 => shootout_base64
-            @exec with_fuel exec_shootout_base64_with_fuel => shootout_base64
-            // @exec default exec_bz2 => bz2
-            // @exec with_fuel exec_bz2_with_fuel => bz2
-        @exec default exec_shootout_random => shootout_random
-        @exec with_fuel exec_shootout_random_with_fuel => shootout_random
-            @exec default exec_shootout_minicsv => shootout_minicsv
-            @exec with_fuel exec_shootout_minicsv_with_fuel => shootout_minicsv
-            @exec default exec_shootout_matrix => shootout_matrix
-            @exec with_fuel exec_shootout_matrix_with_fuel => shootout_matrix
-            @exec default exec_shootout_ratelimit => shootout_ratelimit
-            @exec with_fuel exec_shootout_ratelimit_with_fuel => shootout_ratelimit
+            @exec default exec_bls12_381_pairing => bls12_381_pairing
+            @exec with_fuel exec_bls12_381_pairing_with_fuel => bls12_381_pairing
+            @exec default exec_bls12_377_pairing => bls12_377_pairing
+            @exec with_fuel exec_bls12_377_pairing_with_fuel => bls12_377_pairing
+            @exec default exec_bw6_761_pairing => bw6_761_pairing
+            @exec with_fuel exec_bw6_761_pairing_with_fuel => bw6_761_pairing
+            @exec default exec_ed_on_bls12_381_mul_affine_sw => ed_on_bls12_381_mul_affine_sw
+            @exec with_fuel exec_ed_on_bls12_381_mul_affine_sw_with_fuel => ed_on_bls12_381_mul_affine_sw
+            @exec default exec_ed_on_bls12_377_mul_affine => ed_on_bls12_377_mul_affine
+            @exec with_fuel exec_ed_on_bls12_377_mul_affine_with_fuel => ed_on_bls12_377_mul_affine
         }
     };
 }
@@ -137,51 +113,26 @@ for_each_bench!(def_bench);
 
 criterion_group!(
     benches,
-    compile_pulldown_cmark,
-    compile_pulldown_cmark_with_fuel,
-    exec_pulldown_cmark,
-    exec_pulldown_cmark_with_fuel,
-    compile_bz2,
-    compile_bz2_with_fuel,
-    // There's a weird error coming from Criterion's reporting infraestructure here.
-    // An error related to too many files
-    // exec_bz2,
-    compile_shootout_base64,
-    compile_shootout_base64_with_fuel,
-    exec_shootout_base64,
-    exec_shootout_base64_with_fuel,
-    compile_shootout_fib2,
-    compile_shootout_fib2_with_fuel,
-    exec_shootout_fib2,
-    exec_shootout_fib2_with_fuel,
-    compile_shootout_heapsort,
-    compile_shootout_heapsort_with_fuel,
-    compile_shootout_random,
-    compile_shootout_random_with_fuel,
-    compile_shootout_minicsv,
-    compile_shootout_minicsv_with_fuel,
-    // Exits with exit code 1
-    // exec_shootout_heapsort
-    compile_shootout_keccak,
-    compile_shootout_keccak_with_fuel,
-    compile_shootout_matrix,
-    compile_shootout_matrix_with_fuel,
-    compile_shootout_ratelimit,
-    compile_shootout_ratelimit_with_fuel,
-    exec_shootout_keccak,
-    exec_shootout_keccak_with_fuel,
-    compile_shootout_ed25519,
-    compile_shootout_ed25519_with_fuel,
-    exec_shootout_ed25519,
-    exec_shootout_ed25519_with_fuel,
-    exec_shootout_random,
-    exec_shootout_random_with_fuel,
-    exec_shootout_minicsv,
-    exec_shootout_minicsv_with_fuel,
-    exec_shootout_matrix,
-    exec_shootout_matrix_with_fuel,
-    exec_shootout_ratelimit,
-    exec_shootout_ratelimit_with_fuel,
+    bls12_381_pairing,
+    bls12_381_pairing_with_fuel,
+    bls12_377_pairing,
+    bls12_377_pairing_with_fuel,
+    bw6_761_pairing,
+    bw6_761_pairing_with_fuel,
+    ed_on_bls12_381_mul_affine_sw,
+    ed_on_bls12_381_mul_affine_sw_with_fuel,
+    ed_on_bls12_377_mul_affine,
+    ed_on_bls12_377_mul_affine_with_fuel,
+    exec_bls12_381_pairing,
+    exec_bls12_381_pairing_with_fuel,
+    exec_bls12_377_pairing,
+    exec_bls12_377_pairing_with_fuel,
+    exec_bw6_761_pairing,
+    exec_bw6_761_pairing_with_fuel,
+    exec_ed_on_bls12_381_mul_affine_sw,
+    exec_ed_on_bls12_381_mul_affine_sw_with_fuel,
+    exec_ed_on_bls12_377_mul_affine,
+    exec_ed_on_bls12_377_mul_affine_with_fuel,
 );
 
 criterion_main!(benches);
