@@ -116,10 +116,10 @@ macro_rules! for_each_bench {
             @compile with_fuel bw6_761_mul_projective_g1_with_fuel => bw6_761_mul_projective_g1
             @compile default bw6_761_mul_projective_g2 => bw6_761_mul_projective_g2
             @compile with_fuel bw6_761_mul_projective_g2_with_fuel => bw6_761_mul_projective_g2
-            @compile default ed_on_bls12_381_mul_affine_sw => ed_on_bls12_381_mul_affine_sw
-            @compile with_fuel ed_on_bls12_381_mul_affine_sw_with_fuel => ed_on_bls12_381_mul_affine_sw
-            @compile default ed_on_bls12_377_mul_affine => ed_on_bls12_377_mul_affine
-            @compile with_fuel ed_on_bls12_377_mul_affine_with_fuel => ed_on_bls12_377_mul_affine
+            // @compile default ed_on_bls12_381_mul_affine_sw => ed_on_bls12_381_mul_affine_sw
+            // @compile with_fuel ed_on_bls12_381_mul_affine_sw_with_fuel => ed_on_bls12_381_mul_affine_sw
+            // @compile default ed_on_bls12_377_mul_affine => ed_on_bls12_377_mul_affine
+            // @compile with_fuel ed_on_bls12_377_mul_affine_with_fuel => ed_on_bls12_377_mul_affine
 
             @exec default exec_bls12_381_pairing => bls12_381_pairing
             @exec with_fuel exec_bls12_381_pairing_with_fuel => bls12_381_pairing
@@ -175,10 +175,10 @@ macro_rules! for_each_bench {
             @exec with_fuel exec_bw6_761_mul_projective_g1_with_fuel => bw6_761_mul_projective_g1
             @exec default exec_bw6_761_mul_projective_g2 => bw6_761_mul_projective_g2
             @exec with_fuel exec_bw6_761_mul_projective_g2_with_fuel => bw6_761_mul_projective_g2
-            @exec default exec_ed_on_bls12_381_mul_affine_sw => ed_on_bls12_381_mul_affine_sw
-            @exec with_fuel exec_ed_on_bls12_381_mul_affine_sw_with_fuel => ed_on_bls12_381_mul_affine_sw
-            @exec default exec_ed_on_bls12_377_mul_affine => ed_on_bls12_377_mul_affine
-            @exec with_fuel exec_ed_on_bls12_377_mul_affine_with_fuel => ed_on_bls12_377_mul_affine
+            // @exec default exec_ed_on_bls12_381_mul_affine_sw => ed_on_bls12_381_mul_affine_sw
+            // @exec with_fuel exec_ed_on_bls12_381_mul_affine_sw_with_fuel => ed_on_bls12_381_mul_affine_sw
+            // @exec default exec_ed_on_bls12_377_mul_affine => ed_on_bls12_377_mul_affine
+            // @exec with_fuel exec_ed_on_bls12_377_mul_affine_with_fuel => ed_on_bls12_377_mul_affine
         }
     };
 }
@@ -263,10 +263,10 @@ criterion_group!(
     bw6_761_mul_projective_g1_with_fuel,
     bw6_761_mul_projective_g2,
     bw6_761_mul_projective_g2_with_fuel,
-    ed_on_bls12_381_mul_affine_sw,
-    ed_on_bls12_381_mul_affine_sw_with_fuel,
-    ed_on_bls12_377_mul_affine,
-    ed_on_bls12_377_mul_affine_with_fuel,
+    // ed_on_bls12_381_mul_affine_sw,
+    // ed_on_bls12_381_mul_affine_sw_with_fuel,
+    // ed_on_bls12_377_mul_affine,
+    // ed_on_bls12_377_mul_affine_with_fuel,
     exec_bls12_381_pairing,
     exec_bls12_381_pairing_with_fuel,
     exec_bls12_381_msm_g1_10,
@@ -321,10 +321,10 @@ criterion_group!(
     exec_bw6_761_mul_projective_g1_with_fuel,
     exec_bw6_761_mul_projective_g2,
     exec_bw6_761_mul_projective_g2_with_fuel,
-    exec_ed_on_bls12_381_mul_affine_sw,
-    exec_ed_on_bls12_381_mul_affine_sw_with_fuel,
-    exec_ed_on_bls12_377_mul_affine,
-    exec_ed_on_bls12_377_mul_affine_with_fuel,
+    // exec_ed_on_bls12_381_mul_affine_sw,
+    // exec_ed_on_bls12_381_mul_affine_sw_with_fuel,
+    // exec_ed_on_bls12_377_mul_affine,
+    // exec_ed_on_bls12_377_mul_affine_with_fuel,
 );
 
 criterion_main!(benches);
