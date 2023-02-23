@@ -64,10 +64,58 @@ macro_rules! for_each_bench {
         $mac! {
             @compile default bls12_381_pairing => bls12_381_pairing
             @compile with_fuel bls12_381_pairing_with_fuel => bls12_381_pairing
+            @compile default bls12_381_msm_g1_10 => bls12_381_msm_g1_10
+            @compile with_fuel bls12_381_msm_g1_10_with_fuel => bls12_381_msm_g1_10
+            @compile default bls12_381_msm_g1_1000 => bls12_381_msm_g1_1000
+            @compile with_fuel bls12_381_msm_g1_1000_with_fuel => bls12_381_msm_g1_1000
+            @compile default bls12_381_msm_g2_10 => bls12_381_msm_g2_10
+            @compile with_fuel bls12_381_msm_g2_10_with_fuel => bls12_381_msm_g2_10
+            @compile default bls12_381_msm_g2_1000 => bls12_381_msm_g2_1000
+            @compile with_fuel bls12_381_msm_g2_1000_with_fuel => bls12_381_msm_g2_1000
+            @compile default bls12_381_mul_affine_g1 => bls12_381_mul_affine_g1
+            @compile with_fuel bls12_381_mul_affine_g1_with_fuel => bls12_381_mul_affine_g1
+            @compile default bls12_381_mul_affine_g2 => bls12_381_mul_affine_g2
+            @compile with_fuel bls12_381_mul_affine_g2_with_fuel => bls12_381_mul_affine_g2
+            @compile default bls12_381_mul_projective_g1 => bls12_381_mul_projective_g1
+            @compile with_fuel bls12_381_mul_projective_g1_with_fuel => bls12_381_mul_projective_g1
+            @compile default bls12_381_mul_projective_g2 => bls12_381_mul_projective_g2
+            @compile with_fuel bls12_381_mul_projective_g2_with_fuel => bls12_381_mul_projective_g2
             @compile default bls12_377_pairing => bls12_377_pairing
             @compile with_fuel bls12_377_pairing_with_fuel => bls12_377_pairing
+            @compile default bls12_377_msm_g1_10 => bls12_377_msm_g1_10
+            @compile with_fuel bls12_377_msm_g1_10_with_fuel => bls12_377_msm_g1_10
+            @compile default bls12_377_msm_g1_1000 => bls12_377_msm_g1_1000
+            @compile with_fuel bls12_377_msm_g1_1000_with_fuel => bls12_377_msm_g1_1000
+            @compile default bls12_377_msm_g2_10 => bls12_377_msm_g2_10
+            @compile with_fuel bls12_377_msm_g2_10_with_fuel => bls12_377_msm_g2_10
+            @compile default bls12_377_msm_g2_1000 => bls12_377_msm_g2_1000
+            @compile with_fuel bls12_377_msm_g2_1000_with_fuel => bls12_377_msm_g2_1000
+            @compile default bls12_377_mul_affine_g1 => bls12_377_mul_affine_g1
+            @compile with_fuel bls12_377_mul_affine_g1_with_fuel => bls12_377_mul_affine_g1
+            @compile default bls12_377_mul_affine_g2 => bls12_377_mul_affine_g2
+            @compile with_fuel bls12_377_mul_affine_g2_with_fuel => bls12_377_mul_affine_g2
+            @compile default bls12_377_mul_projective_g1 => bls12_377_mul_projective_g1
+            @compile with_fuel bls12_377_mul_projective_g1_with_fuel => bls12_377_mul_projective_g1
+            @compile default bls12_377_mul_projective_g2 => bls12_377_mul_projective_g2
+            @compile with_fuel bls12_377_mul_projective_g2_with_fuel => bls12_377_mul_projective_g2
             @compile default bw6_761_pairing => bw6_761_pairing
             @compile with_fuel bw6_761_pairing_with_fuel => bw6_761_pairing
+            @compile default bw6_761_msm_g1_10 => bw6_761_msm_g1_10
+            @compile with_fuel bw6_761_msm_g1_10_with_fuel => bw6_761_msm_g1_10
+            @compile default bw6_761_msm_g1_1000 => bw6_761_msm_g1_1000
+            @compile with_fuel bw6_761_msm_g1_1000_with_fuel => bw6_761_msm_g1_1000
+            @compile default bw6_761_msm_g2_10 => bw6_761_msm_g2_10
+            @compile with_fuel bw6_761_msm_g2_10_with_fuel => bw6_761_msm_g2_10
+            @compile default bw6_761_msm_g2_1000 => bw6_761_msm_g2_1000
+            @compile with_fuel bw6_761_msm_g2_1000_with_fuel => bw6_761_msm_g2_1000
+            @compile default bw6_761_mul_affine_g1 => bw6_761_mul_affine_g1
+            @compile with_fuel bw6_761_mul_affine_g1_with_fuel => bw6_761_mul_affine_g1
+            @compile default bw6_761_mul_affine_g2 => bw6_761_mul_affine_g2
+            @compile with_fuel bw6_761_mul_affine_g2_with_fuel => bw6_761_mul_affine_g2
+            @compile default bw6_761_mul_projective_g1 => bw6_761_mul_projective_g1
+            @compile with_fuel bw6_761_mul_projective_g1_with_fuel => bw6_761_mul_projective_g1
+            @compile default bw6_761_mul_projective_g2 => bw6_761_mul_projective_g2
+            @compile with_fuel bw6_761_mul_projective_g2_with_fuel => bw6_761_mul_projective_g2
             @compile default ed_on_bls12_381_mul_affine_sw => ed_on_bls12_381_mul_affine_sw
             @compile with_fuel ed_on_bls12_381_mul_affine_sw_with_fuel => ed_on_bls12_381_mul_affine_sw
             @compile default ed_on_bls12_377_mul_affine => ed_on_bls12_377_mul_affine
@@ -75,10 +123,56 @@ macro_rules! for_each_bench {
 
             @exec default exec_bls12_381_pairing => bls12_381_pairing
             @exec with_fuel exec_bls12_381_pairing_with_fuel => bls12_381_pairing
+            @exec default exec_bls12_381_msm_g1_10 => bls12_381_msm_g1_10
+            @exec with_fuel exec_bls12_381_msm_g1_10_with_fuel => bls12_381_msm_g1_10
+            @exec default exec_bls12_381_msm_g1_1000 => bls12_381_msm_g1_1000
+            @exec with_fuel exec_bls12_381_msm_g1_1000_with_fuel => bls12_381_msm_g1_1000
+            @exec default exec_bls12_381_msm_g2_10 => bls12_381_msm_g2_10
+            @exec with_fuel exec_bls12_381_msm_g2_10_with_fuel => bls12_381_msm_g2_10
+            @exec default exec_bls12_381_msm_g2_1000 => bls12_381_msm_g2_1000
+            @exec with_fuel exec_bls12_381_msm_g2_1000_with_fuel => bls12_381_msm_g2_1000
+            @exec default exec_bls12_381_mul_affine_g1 => bls12_381_mul_affine_g1
+            @exec with_fuel exec_bls12_381_mul_affine_g1_with_fuel => bls12_381_mul_affine_g1
+            @exec default exec_bls12_381_mul_affine_g2 => bls12_381_mul_affine_g2
+            @exec with_fuel exec_bls12_381_mul_affine_g2_with_fuel => bls12_381_mul_affine_g2
+            @exec default exec_bls12_381_mul_projective_g1 => bls12_381_mul_projective_g1
+            @exec with_fuel exec_bls12_381_mul_projective_g1_with_fuel => bls12_381_mul_projective_g1
+            @exec default exec_bls12_381_mul_projective_g2 => bls12_381_mul_projective_g2
+            @exec with_fuel exec_bls12_381_mul_projective_g2_with_fuel => bls12_381_mul_projective_g2
             @exec default exec_bls12_377_pairing => bls12_377_pairing
             @exec with_fuel exec_bls12_377_pairing_with_fuel => bls12_377_pairing
+            @exec default exec_bls12_377_msm_g1_10 => bls12_377_msm_g1_10
+            @exec with_fuel exec_bls12_377_msm_g1_10_with_fuel => bls12_377_msm_g1_10
+            @exec default exec_bls12_377_msm_g1_1000 => bls12_377_msm_g1_1000
+            @exec with_fuel exec_bls12_377_msm_g1_1000_with_fuel => bls12_377_msm_g1_1000
+            @exec default exec_bls12_377_msm_g2_10 => bls12_377_msm_g2_10
+            @exec with_fuel exec_bls12_377_msm_g2_10_with_fuel => bls12_377_msm_g2_10
+            @exec default exec_bls12_377_mul_affine_g1 => bls12_377_mul_affine_g1
+            @exec with_fuel exec_bls12_377_mul_affine_g1_with_fuel => bls12_377_mul_affine_g1
+            @exec default exec_bls12_377_mul_affine_g2 => bls12_377_mul_affine_g2
+            @exec with_fuel exec_bls12_377_mul_affine_g2_with_fuel => bls12_377_mul_affine_g2
+            @exec default exec_bls12_377_mul_projective_g1 => bls12_377_mul_projective_g1
+            @exec with_fuel exec_bls12_377_mul_projective_g1_with_fuel => bls12_377_mul_projective_g1
+            @exec default exec_bls12_377_mul_projective_g2 => bls12_377_mul_projective_g2
+            @exec with_fuel exec_bls12_377_mul_projective_g2_with_fuel => bls12_377_mul_projective_g2
             @exec default exec_bw6_761_pairing => bw6_761_pairing
             @exec with_fuel exec_bw6_761_pairing_with_fuel => bw6_761_pairing
+            @exec default exec_bw6_761_msm_g1_10 => bw6_761_msm_g1_10
+            @exec with_fuel exec_bw6_761_msm_g1_10_with_fuel => bw6_761_msm_g1_10
+            @exec default exec_bw6_761_msm_g1_1000 => bw6_761_msm_g1_1000
+            @exec with_fuel exec_bw6_761_msm_g1_1000_with_fuel => bw6_761_msm_g1_1000
+            @exec default exec_bw6_761_msm_g2_10 => bw6_761_msm_g2_10
+            @exec with_fuel exec_bw6_761_msm_g2_10_with_fuel => bw6_761_msm_g2_10
+            @exec default exec_bw6_761_msm_g2_1000 => bw6_761_msm_g2_1000
+            @exec with_fuel exec_bw6_761_msm_g2_1000_with_fuel => bw6_761_msm_g2_1000
+            @exec default exec_bw6_761_mul_affine_g1 => bw6_761_mul_affine_g1
+            @exec with_fuel exec_bw6_761_mul_affine_g1_with_fuel => bw6_761_mul_affine_g1
+            @exec default exec_bw6_761_mul_affine_g2 => bw6_761_mul_affine_g2
+            @exec with_fuel exec_bw6_761_mul_affine_g2_with_fuel => bw6_761_mul_affine_g2
+            @exec default exec_bw6_761_mul_projective_g1 => bw6_761_mul_projective_g1
+            @exec with_fuel exec_bw6_761_mul_projective_g1_with_fuel => bw6_761_mul_projective_g1
+            @exec default exec_bw6_761_mul_projective_g2 => bw6_761_mul_projective_g2
+            @exec with_fuel exec_bw6_761_mul_projective_g2_with_fuel => bw6_761_mul_projective_g2
             @exec default exec_ed_on_bls12_381_mul_affine_sw => ed_on_bls12_381_mul_affine_sw
             @exec with_fuel exec_ed_on_bls12_381_mul_affine_sw_with_fuel => ed_on_bls12_381_mul_affine_sw
             @exec default exec_ed_on_bls12_377_mul_affine => ed_on_bls12_377_mul_affine
@@ -115,10 +209,58 @@ criterion_group!(
     benches,
     bls12_381_pairing,
     bls12_381_pairing_with_fuel,
+    bls12_381_msm_g1_10,
+    bls12_381_msm_g1_10_with_fuel,
+    bls12_381_msm_g1_1000,
+    bls12_381_msm_g1_1000_with_fuel,
+    bls12_381_msm_g2_10,
+    bls12_381_msm_g2_10_with_fuel,
+    bls12_381_msm_g2_1000,
+    bls12_381_msm_g2_1000_with_fuel,
+    bls12_381_mul_affine_g1,
+    bls12_381_mul_affine_g1_with_fuel,
+    bls12_381_mul_affine_g2,
+    bls12_381_mul_affine_g2_with_fuel,
+    bls12_381_mul_projective_g1,
+    bls12_381_mul_projective_g1_with_fuel,
+    bls12_381_mul_projective_g2,
+    bls12_381_mul_projective_g2_with_fuel,
     bls12_377_pairing,
     bls12_377_pairing_with_fuel,
+    bls12_377_msm_g1_10,
+    bls12_377_msm_g1_10_with_fuel,
+    bls12_377_msm_g1_1000,
+    bls12_377_msm_g1_1000_with_fuel,
+    bls12_377_msm_g2_10,
+    bls12_377_msm_g2_10_with_fuel,
+    bls12_377_msm_g2_1000,
+    bls12_377_msm_g2_1000_with_fuel,
+    bls12_377_mul_affine_g1,
+    bls12_377_mul_affine_g1_with_fuel,
+    bls12_377_mul_affine_g2,
+    bls12_377_mul_affine_g2_with_fuel,
+    bls12_377_mul_projective_g1,
+    bls12_377_mul_projective_g1_with_fuel,
+    bls12_377_mul_projective_g2,
+    bls12_377_mul_projective_g2_with_fuel,
     bw6_761_pairing,
     bw6_761_pairing_with_fuel,
+    bw6_761_msm_g1_10,
+    bw6_761_msm_g1_10_with_fuel,
+    bw6_761_msm_g1_1000,
+    bw6_761_msm_g1_1000_with_fuel,
+    bw6_761_msm_g2_10,
+    bw6_761_msm_g2_10_with_fuel,
+    bw6_761_msm_g2_1000,
+    bw6_761_msm_g2_1000_with_fuel,
+    bw6_761_mul_affine_g1,
+    bw6_761_mul_affine_g1_with_fuel,
+    bw6_761_mul_affine_g2,
+    bw6_761_mul_affine_g2_with_fuel,
+    bw6_761_mul_projective_g1,
+    bw6_761_mul_projective_g1_with_fuel,
+    bw6_761_mul_projective_g2,
+    bw6_761_mul_projective_g2_with_fuel,
     ed_on_bls12_381_mul_affine_sw,
     ed_on_bls12_381_mul_affine_sw_with_fuel,
     ed_on_bls12_377_mul_affine,
