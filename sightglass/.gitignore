@@ -1,0 +1,9 @@
+**/*.rs.bk
+**/*~
+/target/
+benchmarks/**/*.ll
+benchmarks/**/*.o
+
+# Log files produced by running sightglass benchmarks.
+**/stdout-*-*-*.log
+**/stderr-*-*-*.log
