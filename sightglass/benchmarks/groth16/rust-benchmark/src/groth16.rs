@@ -55,9 +55,7 @@ pub fn do_verify_groth16() -> Result<(), Error> {
 		Validate::No,
 	)
 	.unwrap();
-
 	let c = Fp::<MontBackend<FrConfig, 4>, 4>::deserialize_with_mode(C_SERIALIZED, Compress::Yes, Validate::No).unwrap();
-
 	let proof = <Groth16<Bls12_381> as SNARK<BlsFr>>::Proof::deserialize_with_mode(
 		PROOF_SERIALIZED,
 		Compress::Yes,
@@ -65,7 +63,7 @@ pub fn do_verify_groth16() -> Result<(), Error> {
 	)
 	.unwrap();
 
-	// assert_ok!(Groth16::<Bls12_381>::verify(&vk, &[c], &proof));
+	assert_eq!(Groth16::<Bls12_381>::verify(&vk, &[c], &proof).unwrap(), true);
 
 	Ok(())
 }
