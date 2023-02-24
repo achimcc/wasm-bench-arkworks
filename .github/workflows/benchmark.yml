@@ -45,7 +45,7 @@ jobs:
       - name: build benchmarks
         run: |
           cd sightglass && ./benchmarks/build-all.sh
-c
+          
       - name: Run benchmarks
         run: |
           cargo criterion \
