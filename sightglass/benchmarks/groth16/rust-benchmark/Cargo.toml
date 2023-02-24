@@ -12,6 +12,7 @@ ark-std = { version = "0.4.0", default-features = false }
 ark-snark = { version = "0.4.0", default-features = false }
 ark-groth16 = { version = "0.3.0", default-features = false, features = [ "r1cs" ] }
 ark-serialize = { version = "0.4.0", default-features = false, features = [ "derive" ] }
+ark-crypto-primitives = { version = "0.4.0", default-features = false, features = [ "r1cs", "snark" ] } 
 
 [features]
 default = [ "std" ]
@@ -20,5 +21,7 @@ std = [
 	"ark-ec/std",
 	"ark-ff/std",
 	"ark-std/std",
-	"ark-serialize/std"
+	"ark-serialize/std",
+	"ark-groth16/std",
+	"ark-crypto-primitives/std",
 ]

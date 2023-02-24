@@ -1,4 +1,4 @@
-use ark_ec::{AffineRepr, Group, short_weierstrass::SWCurveConfig, pairing::Pairing};
+use ark_ec::{AffineRepr, short_weierstrass::SWCurveConfig};
 use ark_std::{io::Error, vec::Vec};
 
 pub fn do_msm_g1(samples: u32) -> Result<(), Error> {
