@@ -1,9 +1,9 @@
-use ark_bls12_381::{Bls12_381, Fr as BlsFr};
+use ark_bls12_381::{Bls12_381, Fr as BlsFr, FrConfig, MontBackend};
 use ark_ff::Fp;
 use ark_groth16::Groth16;
 use ark_serialize::{CanonicalDeserialize, Compress, Validate};
 use ark_snark::SNARK;
-use ark_std::{io::Error, vec::Vec};
+use ark_std::io::Error;
 
 
 static PROOF_SERIALIZED: &[u8] = &[
@@ -56,7 +56,7 @@ pub fn do_verify_groth16() -> Result<(), Error> {
 	)
 	.unwrap();
 
-	let c = Fp::deserialize_with_mode(C_SERIALIZED, Compress::Yes, Validate::No).unwrap();
+	let c = Fp::<MontBackend<FrConfig, 4>, 4>::deserialize_with_mode(C_SERIALIZED, Compress::Yes, Validate::No).unwrap();
 
 	let proof = <Groth16<Bls12_381> as SNARK<BlsFr>>::Proof::deserialize_with_mode(
 		PROOF_SERIALIZED,
