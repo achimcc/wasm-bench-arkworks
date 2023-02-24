@@ -1,4 +1,4 @@
-use ark_ec::{AffineRepr, twisted_edwards::TECurveConfig};
+use ark_ec::{AffineRepr, short_weierstrass::SWCurveConfig};
 use ark_std::{io::Error, vec::Vec};
 
 pub fn do_msm_sw(samples: u32) -> Result<(), Error> {
