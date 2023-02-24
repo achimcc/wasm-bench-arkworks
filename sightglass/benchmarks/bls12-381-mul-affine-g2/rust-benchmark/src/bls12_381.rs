@@ -1,4 +1,4 @@
-use ark_ec::{AffineRepr, Group, short_weierstrass::SWCurveConfig};
+use ark_ec::{AffineRepr, short_weierstrass::SWCurveConfig};
 use ark_std::io::Error;
 
 pub fn do_mul_affine_g2() -> Result<(), Error> {

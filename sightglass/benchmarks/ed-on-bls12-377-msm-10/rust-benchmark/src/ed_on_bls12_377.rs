@@ -1,4 +1,4 @@
-use ark_ec::{AffineRepr, Group, models::twisted_edwards::TECurveConfig};
+use ark_ec::{AffineRepr, models::twisted_edwards::TECurveConfig};
 use ark_std::{io::Error, vec::Vec};
 
 pub fn do_msm(samples: u32) -> Result<(), Error> {

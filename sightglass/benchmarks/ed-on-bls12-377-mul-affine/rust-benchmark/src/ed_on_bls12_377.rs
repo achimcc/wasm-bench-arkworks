@@ -1,4 +1,4 @@
-use ark_ec::{AffineRepr, Group, models::twisted_edwards::TECurveConfig};
+use ark_ec::{AffineRepr, models::twisted_edwards::TECurveConfig};
 use ark_std::io::Error;
 
 pub fn do_mul_affine() -> Result<(), Error> {
