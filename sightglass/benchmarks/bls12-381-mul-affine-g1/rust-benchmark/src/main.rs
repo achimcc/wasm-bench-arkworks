@@ -5,6 +5,6 @@ mod bls12_381;
 
 fn main() {
     bench::start();
-    let result = bls12_381::do_mul_affine_g1();
+    let _ = bls12_381::do_mul_affine_g1();
     bench::end();
 }

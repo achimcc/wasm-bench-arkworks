@@ -5,6 +5,6 @@ mod bw6_761;
 
 fn main() {
     bench::start();
-    let result = bw6_761::do_msm_g1(1000);
+    let _ = bw6_761::do_msm_g1(1000);
     bench::end();
 }

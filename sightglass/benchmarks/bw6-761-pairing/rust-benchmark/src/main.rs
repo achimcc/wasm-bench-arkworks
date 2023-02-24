@@ -5,6 +5,6 @@ mod bw6_761;
 
 fn main() {
     bench::start();
-    let result = bw6_761::do_pairing();
+    let _ = bw6_761::do_pairing();
     bench::end();
 }
