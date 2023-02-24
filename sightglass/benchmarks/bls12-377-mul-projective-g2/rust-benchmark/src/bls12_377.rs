@@ -1,4 +1,4 @@
-use ark_ec::{AffineRepr, short_weierstrass::SWCurveConfig};
+use ark_ec::{short_weierstrass::SWCurveConfig, Group};
 use ark_std::io::Error;
 
 pub fn do_mul_projective_g2() -> Result<(), Error> {
