@@ -1,5 +1,5 @@
-use ark_bls12_381::{Bls12_381, Fr as BlsFr, FrConfig, MontBackend};
-use ark_ff::Fp;
+use ark_bls12_381::{Bls12_381, Fr as BlsFr, FrConfig};
+use ark_ff::{Fp, fields::MontBackend};
 use ark_groth16::Groth16;
 use ark_serialize::{CanonicalDeserialize, Compress, Validate};
 use ark_snark::SNARK;
