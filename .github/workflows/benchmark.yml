@@ -40,12 +40,15 @@ jobs:
         run: mkdir criterion-template-results
 
       - name: build engine
-        run: cd sightglass/engines/wasmtime && rustc build.rs && ./build && cd ../../
+        run: |
+          cd sightglass/engines/wasmtime && \
+          rustc build.rs && \
+          ./build 
 
       - name: build benchmarks
         run: |
           cd sightglass && ./benchmarks/build-all.sh
-          
+
       - name: Run benchmarks
         run: |
           cargo criterion \
