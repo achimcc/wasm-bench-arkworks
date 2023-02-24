@@ -1,4 +1,4 @@
-#![recursion_limit = "1024"]
+#![recursion_limit = "4096"]
 use criterion::{criterion_group, criterion_main, Criterion};
 
 const BENCH_ROOT: &'static str = "sightglass/benchmarks/";
