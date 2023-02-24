@@ -1,5 +1,5 @@
-use ark_ec::{AffineRepr, Group, short_weierstrass::SWCurveConfig, pairing::Pairing};
-use ark_std::{io::Error, vec::Vec};
+use ark_ec::{AffineRepr, pairing::Pairing};
+use ark_std::io::Error;
 
 pub fn do_pairing() -> Result<(), Error> {
 	let _ = ark_bls12_381::Bls12_381::multi_pairing(
