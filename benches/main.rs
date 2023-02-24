@@ -146,7 +146,7 @@ macro_rules! for_each_bench {
             @compile default ed_on_bls12_377_msm_1000 => ed_on_bls12_377_msm_1000
             // @compile with_fuel ed_on_bls12_377_msm_1000_with_fuel => ed_on_bls12_377_msm_1000
 
-            @exec default exec_groh16 => groth16
+            @exec default exec_groth16 => groth16
             // @exec with_fuel exec_groth16_with_fuel => groth16
             @exec default exec_bls12_381_pairing => bls12_381_pairing
             // @exec with_fuel exec_bls12_381_pairing_with_fuel => bls12_381_pairing

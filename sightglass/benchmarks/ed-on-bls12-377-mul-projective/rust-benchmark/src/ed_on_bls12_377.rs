@@ -1,4 +1,4 @@
-use ark_ec::{AffineRepr, Group, twisted_edwards::TECurveConfig};
+use ark_ec::{Group, twisted_edwards::TECurveConfig};
 use ark_std::io::Error;
 
 pub fn do_mul_projective() -> Result<(), Error> {
