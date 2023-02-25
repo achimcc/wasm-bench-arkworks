@@ -5,6 +5,7 @@ mod ed_on_bls12_381;
 
 fn main() {
     bench::start();
-    let _ = ed_on_bls12_381::do_msm_te(10);
+    let result = ed_on_bls12_381::do_msm_te(10);
     bench::end();
+    assert_eq!(result.unwrap(), true);
 }

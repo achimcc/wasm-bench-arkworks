@@ -5,6 +5,7 @@ mod bls12_381;
 
 fn main() {
     bench::start();
-    let _ = bls12_381::do_pairing();
+    let result = bls12_381::do_pairing();
     bench::end();
+    assert_eq!(result.unwrap(), true);
 }

@@ -5,6 +5,7 @@ mod bw6_761;
 
 fn main() {
     bench::start();
-    let _ = bw6_761::do_msm_g1(10);
+    let result = bw6_761::do_msm_g1(10);
     bench::end();
+    assert_eq!(result.unwrap(), true);
 }
