@@ -63,7 +63,7 @@ pub fn do_verify_groth16() -> Result<(), Error> {
 	)
 	.unwrap();
 
-	assert_eq!(Groth16::<Bls12_381>::verify(&vk, &[c], &proof).unwrap(), ());
+	assert_eq!(Groth16::<Bls12_381>::verify(&vk, &[c], &proof).unwrap(), true)
 
 	Ok(())
 }
