@@ -7,5 +7,5 @@ fn main() {
     bench::start();
     let result = bls12_381::do_mul_affine_g1();
     bench::end();
-    assert_eq!(result.unwrap(), true);
+    assert_eq!(result.unwrap(), ());
 }

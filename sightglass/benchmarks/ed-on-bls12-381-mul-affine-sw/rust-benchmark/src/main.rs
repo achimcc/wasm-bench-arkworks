@@ -7,5 +7,5 @@ fn main() {
     bench::start();
     let result = ed_on_bls12_381::do_mul_affine_sw();
     bench::end();
-    assert_eq!(result.unwrap(), true);
+    assert_eq!(result.unwrap(), ());
 }

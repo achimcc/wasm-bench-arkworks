@@ -7,5 +7,5 @@ fn main() {
     bench::start();
     let result = ed_on_bls12_381::do_mul_projective_te();
     bench::end();
-    assert_eq!(result.unwrap(), true);
+    assert_eq!(result.unwrap(), ());
 }

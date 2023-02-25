@@ -7,5 +7,5 @@ fn main() {
     bench::start();
     let result = ed_on_bls12_381::do_msm_sw(10);
     bench::end();
-    assert_eq!(result.unwrap(), true);
+    assert_eq!(result.unwrap(), ());
 }

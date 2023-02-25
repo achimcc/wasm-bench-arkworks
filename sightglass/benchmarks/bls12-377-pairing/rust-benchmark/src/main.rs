@@ -7,5 +7,5 @@ fn main() {
     bench::start();
     let result = bls12_377::do_pairing();
     bench::end();
-    assert_eq!(result.unwrap(), true);
+    assert_eq!(result.unwrap(), ());
 }

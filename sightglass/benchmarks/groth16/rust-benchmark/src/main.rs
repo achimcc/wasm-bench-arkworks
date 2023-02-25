@@ -7,5 +7,5 @@ fn main() {
     bench::start();
     let result = groth16::do_verify_groth16();
     bench::end();
-    assert_eq!(result.unwrap(), true);
+    assert_eq!(result.unwrap(), ());
 }
