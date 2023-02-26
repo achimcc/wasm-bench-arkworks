@@ -145,9 +145,10 @@ impl VM {
     }
 
     pub fn make_store(&self) -> Store<Context> {
-        let context = Context::default();
-        let store = Store::new(&self.linker.engine(), context);
-        // store.limiter(|s| &mut s.limits);
+        let mut context = Context::default();
+        context.limits = Limits { resources: 100000 };
+        let mut store = Store::new(&self.linker.engine(), context);
+        store.limiter(|s| &mut s.limits);
         store
     }
 }
