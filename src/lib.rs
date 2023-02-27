@@ -46,9 +46,9 @@ impl Default for Context {
         let dir = Dir::open_ambient_dir(".", cap_std::ambient_authority()).unwrap();
         let limits = StoreLimitsBuilder::new()
             // .memory_size(100 << 20 /* 100 MB */)
-            .instances(40000)
-            .tables(40000)
-            .memories(40000)
+            .instances(50000)
+            .tables(50000)
+            .memories(50000)
             .build();
         let wasi = builder
             // Allow access to the cwd, to read benchmark inputs
@@ -85,9 +85,9 @@ impl VM {
         let mut config = options.config(Some(&triple.to_string())).unwrap();
         config.consume_fuel(opts.fuel);
         config.epoch_interruption(opts.epoch_interruption);
-        // config.static_memory_maximum_size(10000 * 65536);
-        // config.static_memory_forced(true);
-        // config.static_memory_guard_size(10000 * 65536);
+        config.static_memory_maximum_size(100000 * 65536);
+        config.static_memory_forced(true);
+        config.static_memory_guard_size(100000 * 65536);
 
         let engine = Engine::new(&config).unwrap();
         let mut linker = Linker::new(&engine);

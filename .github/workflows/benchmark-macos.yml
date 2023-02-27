@@ -44,7 +44,15 @@ jobs:
           cd sightglass/engines/wasmtime && \
           rustc build.rs && \
           ./build 
-
+      - name: ls -la
+        run: |
+          ls -la
+      - name: cd sightglass && ls -la
+        run: |
+          cd sightglass && ls -la
+      - name: build benchmarks
+        run: |
+          cd sightglass && ./benchmarks/build-all.sh
       - name: build benchmarks
         run: |
           cd sightglass && ./benchmarks/build-all.sh
