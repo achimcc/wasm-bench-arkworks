@@ -1,4 +1,4 @@
-name: Benchmark criterion optimized versions
+name: Benchmark criterion 
 
 on:
   push:

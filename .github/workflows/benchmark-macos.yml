@@ -1,4 +1,4 @@
-name: Benchmark criterion optimized versions
+name: Benchmark mac-os criterion 
 
 on:
   push:
