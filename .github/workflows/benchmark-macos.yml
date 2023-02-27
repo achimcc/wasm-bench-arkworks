@@ -55,7 +55,7 @@ jobs:
           cd sightglass && ./benchmarks/build-all.sh
       - name: build benchmarks
         run: |
-          cd sightglass && ./benchmarks/build-all.sh
+          cd sightglass && PATH_MAX=1024 ./benchmarks/build-all.sh
 
       - name: Run benchmarks
         run: |
