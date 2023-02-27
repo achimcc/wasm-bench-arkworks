@@ -46,9 +46,9 @@ impl Default for Context {
         let dir = Dir::open_ambient_dir(".", cap_std::ambient_authority()).unwrap();
         let limits = StoreLimitsBuilder::new()
             // .memory_size(100 << 20 /* 100 MB */)
-            .instances(50000)
-            .tables(50000)
-            .memories(50000)
+            .instances(100000)
+            .tables(100000)
+            .memories(100000)
             .build();
         let wasi = builder
             // Allow access to the cwd, to read benchmark inputs
