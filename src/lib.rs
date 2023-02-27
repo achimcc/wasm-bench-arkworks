@@ -8,12 +8,6 @@ pub struct Limits {
     resources: u64,
 }
 
-impl Limits {
-    fn instances(n: u64) -> Self {
-        Self { resources: n }
-    }
-}
-
 impl ResourceLimiter for Limits {
     fn instances(&self) -> usize {
         self.resources as usize
@@ -43,23 +37,26 @@ impl ResourceLimiter for Limits {
 
 pub struct Context {
     pub wasi: WasiCtx,
-    pub limits: Limits,
+    pub limits: StoreLimits,
 }
 
 impl Default for Context {
     fn default() -> Self {
         let builder = WasiCtxBuilder::new();
         let dir = Dir::open_ambient_dir(".", cap_std::ambient_authority()).unwrap();
+        let limits = StoreLimitsBuilder::new()
+            // .memory_size(100 << 20 /* 100 MB */)
+            .instances(18000)
+            .tables(18000)
+            .memories(18000)
+            .build();
         let wasi = builder
             // Allow access to the cwd, to read benchmark inputs
             .preopened_dir(dir, ".")
             .unwrap()
             .build();
 
-        Self {
-            wasi,
-            limits: Limits::instances(100000),
-        }
+        Self { wasi, limits }
     }
 }
 
@@ -88,6 +85,9 @@ impl VM {
         let mut config = options.config(Some(&triple.to_string())).unwrap();
         config.consume_fuel(opts.fuel);
         config.epoch_interruption(opts.epoch_interruption);
+        // config.static_memory_maximum_size(10000 * 65536);
+        // config.static_memory_forced(true);
+        // config.static_memory_guard_size(10000 * 65536);
 
         let engine = Engine::new(&config).unwrap();
         let mut linker = Linker::new(&engine);
@@ -145,8 +145,7 @@ impl VM {
     }
 
     pub fn make_store(&self) -> Store<Context> {
-        let mut context = Context::default();
-        context.limits = Limits { resources: 1000000 };
+        let context = Context::default();
         let mut store = Store::new(&self.linker.engine(), context);
         store.limiter(|s| &mut s.limits);
         store
