@@ -45,8 +45,10 @@ impl Default for Context {
         let builder = WasiCtxBuilder::new();
         let dir = Dir::open_ambient_dir(".", cap_std::ambient_authority()).unwrap();
         let limits = StoreLimitsBuilder::new()
-            .memory_size(10 << 20 /* 10 MB */)
+            // .memory_size(10 << 20 /* 10 MB */)
             .instances(100000)
+            .tables(100000)
+            .memories(100000)
             .build();
         let wasi = builder
             // Allow access to the cwd, to read benchmark inputs
@@ -141,7 +143,7 @@ impl VM {
 
     pub fn make_store(&self) -> Store<Context> {
         let context = Context::default();
-        let store = Store::new(&self.linker.engine(), context);
+        let mut store = Store::new(&self.linker.engine(), context);
         store.limiter(|s| &mut s.limits);
         store
     }
