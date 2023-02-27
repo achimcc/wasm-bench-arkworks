@@ -142,7 +142,7 @@ impl VM {
     pub fn make_store(&self) -> Store<Context> {
         let context = Context::default();
         let store = Store::new(&self.linker.engine(), context);
-        // store.limiter(|s| &mut s.limits);
+        store.limiter(|s| &mut s.limits);
         store
     }
 }
