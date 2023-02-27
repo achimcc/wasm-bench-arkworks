@@ -85,9 +85,8 @@ impl VM {
         let mut config = options.config(Some(&triple.to_string())).unwrap();
         config.consume_fuel(opts.fuel);
         config.epoch_interruption(opts.epoch_interruption);
-        config.static_memory_maximum_size(100000 * 65536);
-        config.static_memory_forced(true);
-        config.static_memory_guard_size(100000 * 65536);
+        config.static_memory_maximum_size(0);
+        config.dynamic_memory_reserved_for_growth(15 * 65536);
 
         let engine = Engine::new(&config).unwrap();
         let mut linker = Linker::new(&engine);
