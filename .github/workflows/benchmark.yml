@@ -50,7 +50,7 @@ jobs:
           cd sightglass && ./benchmarks/build-all.sh
 
       - name: increase max_map_count
-        run: sysctl -w vm.max_map_count=2621440
+        run: sysctl -w vm.max_map_count=262144000
 
       - name: Run benchmarks
         run: |
