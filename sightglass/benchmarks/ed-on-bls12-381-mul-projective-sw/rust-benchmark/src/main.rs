@@ -9,7 +9,7 @@ use ed_on_bls12_381::do_mul_projective_sw;
 
 fn main() {
     bench::start();
-    do_mul_projective_sw();
+    let result = do_mul_projective_sw();
     bench::end();
     assert_eq!(result.unwrap(), ());
 }
