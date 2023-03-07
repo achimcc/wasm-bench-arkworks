@@ -2,7 +2,6 @@ use ark_bls12_381::{Bls12_381, Fr as BlsFr};
 use ark_ec::{pairing::Pairing, AffineRepr, CurveConfig, Group};
 use ark_ff::Fp;
 use ark_std::{io::Error, vec::Vec};
-use frame_support::assert_ok;
 
 pub fn do_pairing() -> Result<(), Error> {
 	let _ = ark_bls12_381::Bls12_381::multi_pairing(

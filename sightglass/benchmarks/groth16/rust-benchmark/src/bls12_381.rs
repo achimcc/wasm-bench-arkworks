@@ -5,7 +5,6 @@ use ark_groth16::Groth16;
 use ark_serialize::{CanonicalDeserialize, Compress, Validate};
 use ark_snark::SNARK;
 use ark_std::{io::Error, vec::Vec};
-use frame_support::assert_ok;
 
 pub fn do_pairing() -> Result<(), Error> {
 	let _ = ark_bls12_381::Bls12_381::multi_pairing(
@@ -129,7 +128,7 @@ pub fn do_verify_groth16() -> Result<(), Error> {
 	)
 	.unwrap();
 
-	assert_ok!(Groth16::<Bls12_381>::verify(&vk, &[c], &proof));
+	Groth16::<Bls12_381>::verify(&vk, &[c], &proof).unwrap();
 
 	Ok(())
 }
