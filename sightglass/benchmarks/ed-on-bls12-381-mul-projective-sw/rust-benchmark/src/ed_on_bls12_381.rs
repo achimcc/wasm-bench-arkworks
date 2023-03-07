@@ -1,4 +1,5 @@
 use ark_std::{io::Error, vec::Vec};
+use ark_ec::{pairing::Pairing, AffineRepr, CurveConfig, Group};
 
 pub fn do_msm_sw(
 	bases: &[sp_ark_models::short_weierstrass::Affine<ark_ed_on_bls12_381::SWConfig>],
