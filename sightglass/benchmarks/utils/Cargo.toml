@@ -1,0 +1,32 @@
+[package]
+name = "sp-ark-utils"
+version = "0.4.0"
+authors = ["Parity Technologies <admin@parity.io>", "Achim Schneider <achim@parity.io>" ]
+repository = "https://github.com/paritytech/ark-substrate"
+description = "A Twisted Edwards curve defined over the scalar field of the BLS12-381 curve, optimized for Substrate"
+keywords = ["cryptography", "finite-fields", "elliptic-curves", "substrate" ]
+categories = ["cryptography"]
+include = ["Cargo.toml", "src", "README.md", "LICENSE-APACHE", "LICENSE-MIT"]
+license = "MIT/Apache-2.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+sightglass-api = "0.1"
+ark-bls12-377 = { version = "0.4.0", features = ["curve"], default-features = false }
+ark-bls12-381 = { version = "0.4.0", features = ["curve"], default-features = false }
+ark-bw6-761 = { version = "0.4.0", features = ["curve"], default-features = false }
+ark-ed-on-bls12-377 = { version = "0.4.0", features = ["curve"], default-features = false }
+ark-ed-on-bls12-381 = { version = "0.4.0", features = ["curve"], default-features = false }
+ark-ec = { version = "0.4.0", default-features = false }
+ark-ff = { version = "0.4.0", default-features = false }
+ark-std = { version = "0.4.0", default-features = false }
+ark-snark = { version = "0.4.0", default-features = false }
+ark-groth16 = { version = "0.4.0", default-features = false, features = [ "r1cs" ] }
+ark-serialize = { version = "0.4.0", default-features = false, features = [ "derive" ] }
+ark-crypto-primitives = { version = "0.4.0", default-features = false, features = [ "r1cs", "snark" ] } 
+
+
+[features]
+default = [ "std" ]
+std = [ "ark-std/std", "ark-serialize/std" ]
