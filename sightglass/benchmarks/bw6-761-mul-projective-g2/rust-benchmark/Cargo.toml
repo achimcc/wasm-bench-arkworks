@@ -9,7 +9,6 @@ ark-bw6-761 = { version = "0.4.0", default-features = false }
 ark-ec = { version = "0.4.0", default-features = false }
 ark-ff = { version = "0.4.0", default-features = false }
 ark-std = { version = "0.4.0", default-features = false }
-utils = { path = "../../utils" }
 
 [features]
 default = [ "std" ]

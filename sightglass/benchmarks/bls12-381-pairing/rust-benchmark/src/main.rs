@@ -1,7 +1,10 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
+mod bls12_381;
+mod utils;
 use sightglass_api as bench;
-use utils::{generate_arguments, bls12_381::do_pairing};
+use utils::generate_arguments;
+use bls12_381::do_pairing;
 
 fn main() {
     bench::start();

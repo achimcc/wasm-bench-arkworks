@@ -1,7 +1,7 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
 use sightglass_api as bench;
-use utils::{generate_arguments, bls12_381::groth16};
+use crate::utils::generate_arguments;
 
 fn main() {
     bench::start();
