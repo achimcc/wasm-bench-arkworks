@@ -1,4 +1,5 @@
 use ark_std::{io::Error, vec::Vec};
+use ark_ec::{pairing::Pairing, AffineRepr, CurveConfig, Group};
 
 pub fn do_pairing() -> Result<(), Error> {
 	let _out = ark_bls12_377::Bls12_377::multi_pairing(
