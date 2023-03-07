@@ -1,7 +1,10 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
 use sightglass_api as bench;
-use crate::{utils::generate_arguments, ed_on_bls12_381::do_msm_te};
+mod utils;
+mod ed_on_bls12_381;
+use utils::generate_arguments;
+use ed_on_bls12_381::do_msm_te;
 
 fn main() {
     let (bases, scalars) = generate_arguments::<ark_ed_on_bls12_381::EdwardsProjective>(1000);

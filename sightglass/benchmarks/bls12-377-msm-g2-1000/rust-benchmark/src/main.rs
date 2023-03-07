@@ -1,7 +1,10 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
 use sightglass_api as bench;
-use crate::{utils::generate_arguments, bls12_377::do_msm_g2};
+mod utils;
+mod bls12_377;
+use utils::generate_arguments;
+use bls12_377::do_msm_g2;
 
 fn main() {
     let (bases, scalars) = generate_arguments::<ark_ec::short_weierstrass::Projective<ark_bls12_377::g2::Config>>(1000);

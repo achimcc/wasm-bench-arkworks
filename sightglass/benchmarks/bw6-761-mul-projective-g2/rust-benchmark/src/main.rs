@@ -1,7 +1,10 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
 use sightglass_api as bench;
-use crate::{utils::generate_arguments, bw6_761::do_mul_projective_g2};
+mod utils;
+mod bw6_761;
+use utils::generate_arguments;
+use bw6_761::do_mul_projective_g2;
 
 fn main() {
     bench::start();
