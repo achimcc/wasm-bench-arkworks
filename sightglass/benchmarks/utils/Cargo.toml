@@ -1,5 +1,5 @@
 [package]
-name = "sp-ark-utils"
+name = "utils"
 version = "0.4.0"
 authors = ["Parity Technologies <admin@parity.io>", "Achim Schneider <achim@parity.io>" ]
 repository = "https://github.com/paritytech/ark-substrate"
