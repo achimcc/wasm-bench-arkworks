@@ -21,7 +21,6 @@ std = [
 	"ark-ec/std",
 	"ark-ff/std",
 	"ark-std/std",
-    "frame-support/std",
 	"ark-serialize/std",
 	"ark-groth16/std",
 	"ark-crypto-primitives/std",

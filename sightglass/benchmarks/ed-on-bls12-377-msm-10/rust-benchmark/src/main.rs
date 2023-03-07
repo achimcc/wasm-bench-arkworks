@@ -9,7 +9,7 @@ use ed_on_bls12_377::do_msm;
 fn main() {
     let (bases, scalars) = generate_arguments::<sark_ed_on_bls12_377::EdwardsProjective>(10);
     bench::start();
-    let result = do_msm(bases, scalars);
+    let result = do_msm(&bases[..], &scalars[..]);
     bench::end();
     assert_eq!(result.unwrap(), ());
 }

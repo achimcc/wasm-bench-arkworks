@@ -9,7 +9,7 @@ use bls12_377::do_msm_g2;
 fn main() {
     let (bases, scalars) = generate_arguments::<ark_ec::short_weierstrass::Projective<ark_bls12_377::g2::Config>>(10);
     bench::start();
-    let result = bls12_377::do_msm_g2(bases, scalars);
+    let result = bls12_377::do_msm_g2(&bases[..], &scalars[..]);
     bench::end();
     assert_eq!(result.unwrap(), ());
 }
