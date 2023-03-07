@@ -4,6 +4,7 @@ mod bls12_381;
 mod utils;
 use sightglass_api as bench;
 use utils::generate_arguments;
+use ark_ec::CurveGroup;
 use bls12_381::do_mul_projective_g2;
 
 fn main() {

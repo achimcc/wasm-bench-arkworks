@@ -4,6 +4,7 @@ use sightglass_api as bench;
 mod utils;
 mod bw6_761;
 use utils::generate_arguments;
+use ark_ec::CurveGroup;
 use bw6_761::do_mul_projective_g1;
 
 fn main() {

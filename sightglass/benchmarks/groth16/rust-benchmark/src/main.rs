@@ -4,6 +4,7 @@ use sightglass_api as bench;
 mod utils;
 mod groth16;
 use utils::generate_arguments;
+use ark_ec::CurveGroup;
 use groth16::do_verify_groth16;
 
 fn main() {

@@ -4,7 +4,6 @@
 //! For example:
 //! ```compile_fail
 //! use sightglass_api as bench;
-use utils::generate_arguments;
 //! bench::start();
 //! let work = 42 * 42;
 //! bench::end();
