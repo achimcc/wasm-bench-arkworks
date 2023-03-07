@@ -9,7 +9,7 @@ ark-bls12-377 = { version = "0.4.0", features = ["curve"], default-features = fa
 ark-ec = { version = "0.4.0", default-features = false }
 ark-ff = { version = "0.4.0", default-features = false }
 ark-std = { version = "0.4.0", default-features = false }
-frame-support = { version = "19.0.0" }
+frame-support = { version = "19.0.0", default-features = false }
 
 [features]
 default = [ "std" ]
@@ -18,5 +18,5 @@ std = [
 	"ark-ec/std",
 	"ark-ff/std",
 	"ark-std/std",
-"frame-support/std"
+    "frame-support/std"
 ]
