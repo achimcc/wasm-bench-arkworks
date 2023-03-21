@@ -3,7 +3,7 @@
 use sightglass_api as bench;
 mod utils;
 mod groth16;
-use utils::generate_arguments;
+use utils::generate_msm_args;
 use ark_ec::CurveGroup;
 use groth16::do_verify_groth16;
 
