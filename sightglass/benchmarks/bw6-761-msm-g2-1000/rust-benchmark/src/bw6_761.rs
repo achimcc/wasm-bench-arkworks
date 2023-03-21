@@ -1,11 +1,11 @@
 use ark_std::{io::Error, vec::Vec};
-pub use sp_ark_bw6_761::{
+pub use ark_bw6_761::{
 	G1Affine as G1AffineOptimized_Host, G1Projective as G1ProjectiveOptimized_Host,
 	G2Affine as G2AffineOptimized_Host, G2Projective as G2ProjectiveOptimized_Host,
 	HostFunctions as BW6_761HostFunctions, BW6_761 as BW6_761_Host,
 };
-pub use sp_ark_models::{pairing::Pairing, short_weierstrass::SWCurveConfig, AffineRepr, Group};
-use sp_arkworks::PairingError;
+pub use ark_ec::{pairing::Pairing, short_weierstrass::SWCurveConfig, AffineRepr, Group};
+use arkworks::PairingError;
 
 pub struct HostBW6_761 {}
 
@@ -55,10 +55,10 @@ pub fn do_msm_g1(
 }
 
 pub fn do_msm_g1_optimized(
-	bases: &[sp_ark_models::short_weierstrass::Affine<sp_ark_bw6_761::g1::Config<HostBW6_761>>],
-	scalars: &[<sp_ark_bw6_761::g1::Config<HostBW6_761> as sp_ark_models::CurveConfig>::ScalarField],
+	bases: &[ark_ec::short_weierstrass::Affine<ark_bw6_761::g1::Config<HostBW6_761>>],
+	scalars: &[<ark_bw6_761::g1::Config<HostBW6_761> as ark_ec::CurveConfig>::ScalarField],
 ) -> Result<(), Error> {
-	let _out = <sp_ark_bw6_761::g1::Config<HostBW6_761> as SWCurveConfig>::msm(bases, scalars);
+	let _out = <ark_bw6_761::g1::Config<HostBW6_761> as SWCurveConfig>::msm(bases, scalars);
 	Ok(())
 }
 
@@ -71,10 +71,10 @@ pub fn do_msm_g2(
 }
 
 pub fn do_msm_g2_optimized(
-	bases: &[sp_ark_models::short_weierstrass::Affine<sp_ark_bw6_761::g2::Config<HostBW6_761>>],
-	scalars: &[<sp_ark_bw6_761::g2::Config<HostBW6_761> as sp_ark_models::CurveConfig>::ScalarField],
+	bases: &[ark_ec::short_weierstrass::Affine<ark_bw6_761::g2::Config<HostBW6_761>>],
+	scalars: &[<ark_bw6_761::g2::Config<HostBW6_761> as ark_ec::CurveConfig>::ScalarField],
 ) -> Result<(), Error> {
-	let _out = <sp_ark_bw6_761::g2::Config<HostBW6_761> as SWCurveConfig>::msm(bases, scalars);
+	let _out = <ark_bw6_761::g2::Config<HostBW6_761> as SWCurveConfig>::msm(bases, scalars);
 	Ok(())
 }
 
@@ -87,10 +87,10 @@ pub fn do_mul_affine_g1(
 }
 
 pub fn do_mul_affine_g1_optimized(
-	base: &sp_ark_models::short_weierstrass::Affine<sp_ark_bw6_761::g1::Config<HostBW6_761>>,
+	base: &ark_ec::short_weierstrass::Affine<ark_bw6_761::g1::Config<HostBW6_761>>,
 	scalar: &[u64],
 ) -> Result<(), Error> {
-	let _out = <sp_ark_bw6_761::g1::Config<HostBW6_761> as SWCurveConfig>::mul_affine(base, scalar);
+	let _out = <ark_bw6_761::g1::Config<HostBW6_761> as SWCurveConfig>::mul_affine(base, scalar);
 	Ok(())
 }
 
@@ -103,11 +103,11 @@ pub fn do_mul_projective_g1(
 }
 
 pub fn do_mul_projective_g1_optimized(
-	base: &sp_ark_models::short_weierstrass::Projective<sp_ark_bw6_761::g1::Config<HostBW6_761>>,
+	base: &ark_ec::short_weierstrass::Projective<ark_bw6_761::g1::Config<HostBW6_761>>,
 	scalar: &[u64],
 ) -> Result<(), Error> {
 	let _out =
-		<sp_ark_bw6_761::g1::Config<HostBW6_761> as SWCurveConfig>::mul_projective(base, scalar);
+		<ark_bw6_761::g1::Config<HostBW6_761> as SWCurveConfig>::mul_projective(base, scalar);
 	Ok(())
 }
 
@@ -120,10 +120,10 @@ pub fn do_mul_affine_g2(
 }
 
 pub fn do_mul_affine_g2_optimized(
-	base: &sp_ark_models::short_weierstrass::Affine<sp_ark_bw6_761::g2::Config<HostBW6_761>>,
+	base: &ark_ec::short_weierstrass::Affine<ark_bw6_761::g2::Config<HostBW6_761>>,
 	scalar: &[u64],
 ) -> Result<(), Error> {
-	let _out = <sp_ark_bw6_761::g2::Config<HostBW6_761> as SWCurveConfig>::mul_affine(base, scalar);
+	let _out = <ark_bw6_761::g2::Config<HostBW6_761> as SWCurveConfig>::mul_affine(base, scalar);
 	Ok(())
 }
 
@@ -136,11 +136,11 @@ pub fn do_mul_projective_g2(
 }
 
 pub fn do_mul_projective_g2_optimized(
-	base: &sp_ark_models::short_weierstrass::Projective<sp_ark_bw6_761::g2::Config<HostBW6_761>>,
+	base: &ark_ec::short_weierstrass::Projective<ark_bw6_761::g2::Config<HostBW6_761>>,
 	scalar: &[u64],
 ) -> Result<(), Error> {
 	let _out =
-		<sp_ark_bw6_761::g2::Config<HostBW6_761> as SWCurveConfig>::mul_projective(base, scalar);
+		<ark_bw6_761::g2::Config<HostBW6_761> as SWCurveConfig>::mul_projective(base, scalar);
 	Ok(())
 }
 
