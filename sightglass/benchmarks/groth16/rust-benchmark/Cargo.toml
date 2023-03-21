@@ -23,8 +23,6 @@ std = [
 	"ark-ec/std",
 	"ark-ff/std",
 	"ark-std/std",
-    ,
-	,
 	"ark-groth16/std",
 	"ark-crypto-primitives/std"
 ]
