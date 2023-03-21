@@ -28,6 +28,6 @@ pub fn do_mul_projective(
 	base: &ark_ed_on_bls12_377::EdwardsProjective,
 	scalar: &[u64],
 ) -> Result<(), Error> {
-	let _out = <ark_ed_on_bls12_377::EdwardsConfig as TECurveConfig>::mul_projective(base, scalar);
+	let _out = <ark_ed_on_bls12_377::EdwardsConfig as TECurveConfig>::mul_projective(&base, &scalar);
 	Ok(())
 }

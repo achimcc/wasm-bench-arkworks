@@ -20,7 +20,7 @@ pub fn do_msm_te(
 }
 
 pub fn do_mul_affine_sw(base: &ark_ed_on_bls12_381::SWAffine, scalar: &[u64]) -> Result<(), Error> {
-	let _out = <ark_ed_on_bls12_381::EdwardsConfig as SWCurveConfig>::mul_affine(base, scalar);
+	let _out = <ark_ed_on_bls12_381::EdwardsConfig as SWCurveConfig>::mul_affine(&base, &scalar);
 	Ok(())
 }
 
