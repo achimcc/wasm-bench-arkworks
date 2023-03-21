@@ -2,7 +2,8 @@
 name = "sightglass-recorder"
 version = "0.1.0"
 description = "A measurement tool for compiling and running a single Wasm benchmark"
-authors = ["Sightglass Project Developers"]
+authors = ["Sightglass Project Developers"
+]
 edition = "2021"
 
 [dependencies]
@@ -10,7 +11,8 @@ anyhow = "1.0"
 libloading = "0.7"
 log = "0.4"
 precision = "0.1.15"
-serde = { version = "1.0.118", features = ["derive"] }
+serde = { version = "1.0.118", features = ["derive"
+] }
 sightglass-build = { path = "../build" }
 sightglass-data = { path = "../data" }
 thiserror = "1.0"

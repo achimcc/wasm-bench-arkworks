@@ -1,7 +1,8 @@
 [package]
 name = "sightglass-analysis"
 version = "0.1.0"
-authors = ["Sightglass Project Developers"]
+authors = ["Sightglass Project Developers"
+]
 edition = "2021"
 
 [dependencies]

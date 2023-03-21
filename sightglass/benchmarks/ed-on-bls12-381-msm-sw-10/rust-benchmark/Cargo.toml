@@ -17,5 +17,5 @@ std = [
 	"ark-ed-on-bls12-381/std",
 	"ark-ec/std",
 	"ark-ff/std",
-	"ark-std/std",
+	"ark-std/std"
 ]
