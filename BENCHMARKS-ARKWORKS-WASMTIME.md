@@ -49,284 +49,522 @@
     - [exec:bls12-381-msm-g1-1000:default](#exec:bls12-381-msm-g1-1000:default)
     - [exec:bls12-381-msm-g2-10:default](#exec:bls12-381-msm-g2-10:default)
     - [exec:bls12-381-msm-g2-1000:default](#exec:bls12-381-msm-g2-1000:default)
+    - [exec:bls12-381-mul-affine-g1:default](#exec:bls12-381-mul-affine-g1:default)
+    - [exec:bls12-381-mul-affine-g2:default](#exec:bls12-381-mul-affine-g2:default)
+    - [exec:bls12-381-mul-projective-g1:default](#exec:bls12-381-mul-projective-g1:default)
+    - [exec:bls12-381-mul-projective-g2:default](#exec:bls12-381-mul-projective-g2:default)
+    - [exec:bls12-377-pairing:default](#exec:bls12-377-pairing:default)
+    - [exec:bls12-377-msm-g1-10:default](#exec:bls12-377-msm-g1-10:default)
+    - [exec:bls12-377-msm-g1-1000:default](#exec:bls12-377-msm-g1-1000:default)
+    - [exec:bls12-377-msm-g2-10:default](#exec:bls12-377-msm-g2-10:default)
+    - [exec:bls12-377-msm-g2-1000:default](#exec:bls12-377-msm-g2-1000:default)
+    - [exec:bls12-377-mul-affine-g1:default](#exec:bls12-377-mul-affine-g1:default)
+    - [exec:bls12-377-mul-affine-g2:default](#exec:bls12-377-mul-affine-g2:default)
+    - [exec:bls12-377-mul-projective-g1:default](#exec:bls12-377-mul-projective-g1:default)
+    - [exec:bls12-377-mul-projective-g2:default](#exec:bls12-377-mul-projective-g2:default)
+    - [exec:bw6-761-pairing:default](#exec:bw6-761-pairing:default)
+    - [exec:bw6-761-msm-g1-10:default](#exec:bw6-761-msm-g1-10:default)
+    - [exec:bw6-761-msm-g1-1000:default](#exec:bw6-761-msm-g1-1000:default)
+    - [exec:bw6-761-msm-g2-10:default](#exec:bw6-761-msm-g2-10:default)
+    - [exec:bw6-761-msm-g2-1000:default](#exec:bw6-761-msm-g2-1000:default)
+    - [exec:bw6-761-mul-affine-g1:default](#exec:bw6-761-mul-affine-g1:default)
+    - [exec:bw6-761-mul-affine-g2:default](#exec:bw6-761-mul-affine-g2:default)
+    - [exec:bw6-761-mul-projective-g1:default](#exec:bw6-761-mul-projective-g1:default)
+    - [exec:bw6-761-mul-projective-g2:default](#exec:bw6-761-mul-projective-g2:default)
+    - [exec:ed-on-bls12-381-msm-sw-10:default](#exec:ed-on-bls12-381-msm-sw-10:default)
+    - [exec:ed-on-bls12-381-msm-sw-1000:default](#exec:ed-on-bls12-381-msm-sw-1000:default)
+    - [exec:ed-on-bls12-381-msm-te-10:default](#exec:ed-on-bls12-381-msm-te-10:default)
+    - [exec:ed-on-bls12-381-msm-te-1000:default](#exec:ed-on-bls12-381-msm-te-1000:default)
+    - [exec:ed-on-bls12-381-mul-affine-sw:default](#exec:ed-on-bls12-381-mul-affine-sw:default)
+    - [exec:ed-on-bls12-381-mul-affine-te:default](#exec:ed-on-bls12-381-mul-affine-te:default)
+    - [exec:ed-on-bls12-381-mul-projective-sw:default](#exec:ed-on-bls12-381-mul-projective-sw:default)
+    - [exec:ed-on-bls12-381-mul-projective-te:default](#exec:ed-on-bls12-381-mul-projective-te:default)
+    - [exec:ed-on-bls12-377-mul-affine:default](#exec:ed-on-bls12-377-mul-affine:default)
+    - [exec:ed-on-bls12-377-mul-projective:default](#exec:ed-on-bls12-377-mul-projective:default)
+    - [exec:ed-on-bls12-377-msm-10:default](#exec:ed-on-bls12-377-msm-10:default)
+    - [exec:ed-on-bls12-377-msm-1000:default](#exec:ed-on-bls12-377-msm-1000:default)
 
 ## Benchmark Results
 
 ### compile:groth16:default
 
-|        | `2327243_bytes`            |
+|        | `2307737_bytes`            |
 |:-------|:-------------------------- |
-|        | `296.66 ms` (✅ **1.00x**)  |
+|        | `227.83 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-381-pairing:default
 
-|        | `2207671_bytes`            |
+|        | `2279395_bytes`            |
 |:-------|:-------------------------- |
-|        | `148.39 ms` (✅ **1.00x**)  |
+|        | `218.59 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-381-msm-g1-10:default
 
-|        | `2193459_bytes`            |
+|        | `2193456_bytes`            |
 |:-------|:-------------------------- |
-|        | `155.92 ms` (✅ **1.00x**)  |
+|        | `129.37 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-381-msm-g1-1000:default
 
-|        | `2192638_bytes`            |
+|        | `2192640_bytes`            |
 |:-------|:-------------------------- |
-|        | `155.49 ms` (✅ **1.00x**)  |
+|        | `128.93 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-381-msm-g2-10:default
 
-|        | `2184437_bytes`            |
+|        | `2184436_bytes`            |
 |:-------|:-------------------------- |
-|        | `139.91 ms` (✅ **1.00x**)  |
+|        | `117.98 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-381-msm-g2-1000:default
 
-|        | `2183034_bytes`            |
+|        | `2183027_bytes`            |
 |:-------|:-------------------------- |
-|        | `141.06 ms` (✅ **1.00x**)  |
+|        | `116.54 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-381-mul-affine-g1:default
 
-|        | `2139407_bytes`            |
+|        | `2164128_bytes`            |
 |:-------|:-------------------------- |
-|        | `101.21 ms` (✅ **1.00x**)  |
+|        | `105.04 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-381-mul-affine-g2:default
 
-|        | `2137607_bytes`           |
-|:-------|:------------------------- |
-|        | `92.90 ms` (✅ **1.00x**)  |
+|        | `2174293_bytes`            |
+|:-------|:-------------------------- |
+|        | `110.15 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-381-mul-projective-g1:default
 
-|        | `2139911_bytes`            |
+|        | `2162920_bytes`            |
 |:-------|:-------------------------- |
-|        | `101.13 ms` (✅ **1.00x**)  |
+|        | `101.53 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-381-mul-projective-g2:default
 
-|        | `2137786_bytes`           |
-|:-------|:------------------------- |
-|        | `89.78 ms` (✅ **1.00x**)  |
+|        | `2173340_bytes`            |
+|:-------|:-------------------------- |
+|        | `109.65 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-377-pairing:default
 
-|        | `2231604_bytes`            |
+|        | `2338263_bytes`            |
 |:-------|:-------------------------- |
-|        | `219.75 ms` (✅ **1.00x**)  |
+|        | `313.10 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-377-msm-g1-10:default
 
-|        | `2180758_bytes`            |
+|        | `2193106_bytes`            |
 |:-------|:-------------------------- |
-|        | `143.07 ms` (✅ **1.00x**)  |
+|        | `129.42 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-377-msm-g1-1000:default
 
-|        | `2179357_bytes`            |
+|        | `2192284_bytes`            |
 |:-------|:-------------------------- |
-|        | `141.97 ms` (✅ **1.00x**)  |
+|        | `128.77 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-377-msm-g2-10:default
 
-|        | `2185760_bytes`            |
+|        | `2185765_bytes`            |
 |:-------|:-------------------------- |
-|        | `140.93 ms` (✅ **1.00x**)  |
+|        | `118.01 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-377-msm-g2-1000:default
 
-|        | `2184358_bytes`            |
+|        | `2184366_bytes`            |
 |:-------|:-------------------------- |
-|        | `141.33 ms` (✅ **1.00x**)  |
+|        | `117.39 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-377-mul-affine-g1:default
 
-|        | `2139314_bytes`            |
+|        | `2163988_bytes`            |
 |:-------|:-------------------------- |
-|        | `101.43 ms` (✅ **1.00x**)  |
+|        | `105.12 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-377-mul-affine-g2:default
 
-|        | `2138368_bytes`           |
-|:-------|:------------------------- |
-|        | `92.28 ms` (✅ **1.00x**)  |
+|        | `2175581_bytes`            |
+|:-------|:-------------------------- |
+|        | `115.30 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-377-mul-projective-g1:default
 
-|        | `2139821_bytes`            |
+|        | `2162787_bytes`            |
 |:-------|:-------------------------- |
-|        | `102.19 ms` (✅ **1.00x**)  |
+|        | `102.03 ms` (✅ **1.00x**)  |
 
 ### compile:bls12-377-mul-projective-g2:default
 
-|        | `2138541_bytes`           |
-|:-------|:------------------------- |
-|        | `92.64 ms` (✅ **1.00x**)  |
+|        | `2174450_bytes`            |
+|:-------|:-------------------------- |
+|        | `110.45 ms` (✅ **1.00x**)  |
 
 ### compile:bw6-761-pairing:default
 
-|        | `2204841_bytes`            |
+|        | `2236037_bytes`            |
 |:-------|:-------------------------- |
-|        | `158.49 ms` (✅ **1.00x**)  |
+|        | `182.04 ms` (✅ **1.00x**)  |
 
 ### compile:bw6-761-msm-g1-10:default
 
-|        | `2209257_bytes`            |
+|        | `2209260_bytes`            |
 |:-------|:-------------------------- |
-|        | `208.35 ms` (✅ **1.00x**)  |
+|        | `174.76 ms` (✅ **1.00x**)  |
 
 ### compile:bw6-761-msm-g1-1000:default
 
-|        | `2207594_bytes`            |
+|        | `2207601_bytes`            |
 |:-------|:-------------------------- |
-|        | `206.42 ms` (✅ **1.00x**)  |
+|        | `171.36 ms` (✅ **1.00x**)  |
 
 ### compile:bw6-761-msm-g2-10:default
 
-|        | `2209265_bytes`            |
+|        | `2209261_bytes`            |
 |:-------|:-------------------------- |
-|        | `209.52 ms` (✅ **1.00x**)  |
+|        | `174.27 ms` (✅ **1.00x**)  |
 
 ### compile:bw6-761-msm-g2-1000:default
 
-|        | `2207598_bytes`            |
+|        | `2207591_bytes`            |
 |:-------|:-------------------------- |
-|        | `204.93 ms` (✅ **1.00x**)  |
+|        | `171.03 ms` (✅ **1.00x**)  |
 
 ### compile:bw6-761-mul-affine-g1:default
 
-|        | `2165342_bytes`            |
+|        | `2195269_bytes`            |
 |:-------|:-------------------------- |
-|        | `135.12 ms` (✅ **1.00x**)  |
+|        | `159.93 ms` (✅ **1.00x**)  |
 
 ### compile:bw6-761-mul-affine-g2:default
 
-|        | `2165339_bytes`            |
+|        | `2195269_bytes`            |
 |:-------|:-------------------------- |
-|        | `134.42 ms` (✅ **1.00x**)  |
+|        | `160.37 ms` (✅ **1.00x**)  |
 
 ### compile:bw6-761-mul-projective-g1:default
 
-|        | `2165539_bytes`            |
+|        | `2190885_bytes`            |
 |:-------|:-------------------------- |
-|        | `135.72 ms` (✅ **1.00x**)  |
+|        | `149.74 ms` (✅ **1.00x**)  |
 
 ### compile:bw6-761-mul-projective-g2:default
 
-|        | `2165542_bytes`            |
+|        | `2190884_bytes`            |
 |:-------|:-------------------------- |
-|        | `135.10 ms` (✅ **1.00x**)  |
+|        | `150.22 ms` (✅ **1.00x**)  |
 
 ### compile:ed-on-bls12-381-msm-sw-10:default
 
-|        | `2176588_bytes`            |
+|        | `2176876_bytes`            |
 |:-------|:-------------------------- |
-|        | `132.09 ms` (✅ **1.00x**)  |
+|        | `109.95 ms` (✅ **1.00x**)  |
 
 ### compile:ed-on-bls12-381-msm-sw-1000:default
 
-|        | `2175792_bytes`            |
+|        | `2175469_bytes`            |
 |:-------|:-------------------------- |
-|        | `131.73 ms` (✅ **1.00x**)  |
+|        | `109.74 ms` (✅ **1.00x**)  |
 
 ### compile:ed-on-bls12-381-msm-te-10:default
 
-|        | `2165840_bytes`            |
+|        | `2165841_bytes`            |
 |:-------|:-------------------------- |
-|        | `129.70 ms` (✅ **1.00x**)  |
+|        | `106.40 ms` (✅ **1.00x**)  |
 
 ### compile:ed-on-bls12-381-msm-te-1000:default
 
-|        | `2164247_bytes`            |
+|        | `2163915_bytes`            |
 |:-------|:-------------------------- |
-|        | `127.32 ms` (✅ **1.00x**)  |
+|        | `105.55 ms` (✅ **1.00x**)  |
 
 ### compile:ed-on-bls12-381-mul-affine-sw:default
 
-|        | `2137124_bytes`           |
-|:-------|:------------------------- |
-|        | `87.91 ms` (✅ **1.00x**)  |
+|        | `2157674_bytes`            |
+|:-------|:-------------------------- |
+|        | `107.44 ms` (✅ **1.00x**)  |
 
 ### compile:ed-on-bls12-381-mul-affine-te:default
 
-|        | `2137127_bytes`           |
-|:-------|:------------------------- |
-|        | `89.24 ms` (✅ **1.00x**)  |
+|        | `2149670_bytes`            |
+|:-------|:-------------------------- |
+|        | `100.78 ms` (✅ **1.00x**)  |
 
 ### compile:ed-on-bls12-381-mul-projective-sw:default
 
-|        | `2137124_bytes`           |
+|        | `2158557_bytes`           |
 |:-------|:------------------------- |
-|        | `91.88 ms` (✅ **1.00x**)  |
+|        | `95.03 ms` (✅ **1.00x**)  |
 
 ### compile:ed-on-bls12-381-mul-projective-te:default
 
-|        | `2148055_bytes`            |
+|        | `2150657_bytes`            |
 |:-------|:-------------------------- |
-|        | `108.38 ms` (✅ **1.00x**)  |
+|        | `104.22 ms` (✅ **1.00x**)  |
 
 ### compile:ed-on-bls12-377-mul-affine:default
 
-|        | `2129469_bytes`           |
-|:-------|:------------------------- |
-|        | `88.31 ms` (✅ **1.00x**)  |
+|        | `2149855_bytes`            |
+|:-------|:-------------------------- |
+|        | `100.75 ms` (✅ **1.00x**)  |
 
 ### compile:ed-on-bls12-377-mul-projective:default
 
-|        | `2148175_bytes`            |
+|        | `2150847_bytes`            |
 |:-------|:-------------------------- |
-|        | `109.01 ms` (✅ **1.00x**)  |
+|        | `104.11 ms` (✅ **1.00x**)  |
 
 ### compile:ed-on-bls12-377-msm-10:default
 
 |        | `2166342_bytes`            |
 |:-------|:-------------------------- |
-|        | `130.36 ms` (✅ **1.00x**)  |
+|        | `107.74 ms` (✅ **1.00x**)  |
 
 ### compile:ed-on-bls12-377-msm-1000:default
 
-|        | `2164136_bytes`            |
+|        | `2164134_bytes`            |
 |:-------|:-------------------------- |
-|        | `125.78 ms` (✅ **1.00x**)  |
+|        | `107.02 ms` (✅ **1.00x**)  |
 
 ### exec:groth16:default
 
-|        | `2327243_bytes`           |
+|        | `2307737_bytes`           |
 |:-------|:------------------------- |
-|        | `62.31 ms` (✅ **1.00x**)  |
+|        | `52.01 ms` (✅ **1.00x**)  |
 
 ### exec:bls12-381-pairing:default
 
-|        | `2207671_bytes`           |
+|        | `2279395_bytes`           |
 |:-------|:------------------------- |
-|        | `19.37 ms` (✅ **1.00x**)  |
+|        | `37.33 ms` (✅ **1.00x**)  |
 
 ### exec:bls12-381-msm-g1-10:default
 
-|        | `2193459_bytes`           |
+|        | `2193456_bytes`           |
 |:-------|:------------------------- |
-|        | `39.89 ms` (✅ **1.00x**)  |
+|        | `33.24 ms` (✅ **1.00x**)  |
 
 ### exec:bls12-381-msm-g1-1000:default
 
-|        | `2192638_bytes`           |
+|        | `2192640_bytes`           |
 |:-------|:------------------------- |
-|        | `2.89 s` (✅ **1.00x**)    |
+|        | `2.41 s` (✅ **1.00x**)    |
 
 ### exec:bls12-381-msm-g2-10:default
 
-|        | `2184437_bytes`            |
+|        | `2184436_bytes`            |
 |:-------|:-------------------------- |
-|        | `253.73 ms` (✅ **1.00x**)  |
+|        | `210.51 ms` (✅ **1.00x**)  |
 
 ### exec:bls12-381-msm-g2-1000:default
 
-|        | `2183034_bytes`           |
+|        | `2183027_bytes`           |
 |:-------|:------------------------- |
-|        | `22.35 s` (✅ **1.00x**)   |
+|        | `18.51 s` (✅ **1.00x**)   |
+
+### exec:bls12-381-mul-affine-g1:default
+
+|        | `2164128_bytes`           |
+|:-------|:------------------------- |
+|        | `2.25 ms` (✅ **1.00x**)   |
+
+### exec:bls12-381-mul-affine-g2:default
+
+|        | `2174293_bytes`           |
+|:-------|:------------------------- |
+|        | `21.57 ms` (✅ **1.00x**)  |
+
+### exec:bls12-381-mul-projective-g1:default
+
+|        | `2162920_bytes`           |
+|:-------|:------------------------- |
+|        | `2.34 ms` (✅ **1.00x**)   |
+
+### exec:bls12-381-mul-projective-g2:default
+
+|        | `2173340_bytes`           |
+|:-------|:------------------------- |
+|        | `21.89 ms` (✅ **1.00x**)  |
+
+### exec:bls12-377-pairing:default
+
+|        | `2338263_bytes`           |
+|:-------|:------------------------- |
+|        | `35.41 ms` (✅ **1.00x**)  |
+
+### exec:bls12-377-msm-g1-10:default
+
+|        | `2193106_bytes`           |
+|:-------|:------------------------- |
+|        | `32.09 ms` (✅ **1.00x**)  |
+
+### exec:bls12-377-msm-g1-1000:default
+
+|        | `2192284_bytes`           |
+|:-------|:------------------------- |
+|        | `2.36 s` (✅ **1.00x**)    |
+
+### exec:bls12-377-msm-g2-10:default
+
+|        | `2185765_bytes`            |
+|:-------|:-------------------------- |
+|        | `211.86 ms` (✅ **1.00x**)  |
+
+### exec:bls12-377-msm-g2-1000:default
+
+|        | `2184366_bytes`           |
+|:-------|:------------------------- |
+|        | `18.08 s` (✅ **1.00x**)   |
+
+### exec:bls12-377-mul-affine-g1:default
+
+|        | `2163988_bytes`           |
+|:-------|:------------------------- |
+|        | `2.36 ms` (✅ **1.00x**)   |
+
+### exec:bls12-377-mul-affine-g2:default
+
+|        | `2175581_bytes`           |
+|:-------|:------------------------- |
+|        | `18.72 ms` (✅ **1.00x**)  |
+
+### exec:bls12-377-mul-projective-g1:default
+
+|        | `2162787_bytes`           |
+|:-------|:------------------------- |
+|        | `2.44 ms` (✅ **1.00x**)   |
+
+### exec:bls12-377-mul-projective-g2:default
+
+|        | `2174450_bytes`           |
+|:-------|:------------------------- |
+|        | `19.09 ms` (✅ **1.00x**)  |
+
+### exec:bw6-761-pairing:default
+
+|        | `2236037_bytes`            |
+|:-------|:-------------------------- |
+|        | `120.93 ms` (✅ **1.00x**)  |
+
+### exec:bw6-761-msm-g1-10:default
+
+|        | `2209260_bytes`            |
+|:-------|:-------------------------- |
+|        | `275.47 ms` (✅ **1.00x**)  |
+
+### exec:bw6-761-msm-g1-1000:default
+
+|        | `2207601_bytes`           |
+|:-------|:------------------------- |
+|        | `21.98 s` (✅ **1.00x**)   |
+
+### exec:bw6-761-msm-g2-10:default
+
+|        | `2209261_bytes`            |
+|:-------|:-------------------------- |
+|        | `250.68 ms` (✅ **1.00x**)  |
+
+### exec:bw6-761-msm-g2-1000:default
+
+|        | `2207591_bytes`           |
+|:-------|:------------------------- |
+|        | `21.95 s` (✅ **1.00x**)   |
+
+### exec:bw6-761-mul-affine-g1:default
+
+|        | `2195269_bytes`           |
+|:-------|:------------------------- |
+|        | `25.41 ms` (✅ **1.00x**)  |
+
+### exec:bw6-761-mul-affine-g2:default
+
+|        | `2195269_bytes`           |
+|:-------|:------------------------- |
+|        | `22.32 ms` (✅ **1.00x**)  |
+
+### exec:bw6-761-mul-projective-g1:default
+
+|        | `2190885_bytes`           |
+|:-------|:------------------------- |
+|        | `25.68 ms` (✅ **1.00x**)  |
+
+### exec:bw6-761-mul-projective-g2:default
+
+|        | `2190884_bytes`           |
+|:-------|:------------------------- |
+|        | `22.59 ms` (✅ **1.00x**)  |
+
+### exec:ed-on-bls12-381-msm-sw-10:default
+
+|        | `2176876_bytes`           |
+|:-------|:------------------------- |
+|        | `11.94 ms` (✅ **1.00x**)  |
+
+### exec:ed-on-bls12-381-msm-sw-1000:default
+
+|        | `2175469_bytes`            |
+|:-------|:-------------------------- |
+|        | `539.12 ms` (✅ **1.00x**)  |
+
+### exec:ed-on-bls12-381-msm-te-10:default
+
+|        | `2165841_bytes`           |
+|:-------|:------------------------- |
+|        | `14.30 ms` (✅ **1.00x**)  |
+
+### exec:ed-on-bls12-381-msm-te-1000:default
+
+|        | `2163915_bytes`            |
+|:-------|:-------------------------- |
+|        | `616.37 ms` (✅ **1.00x**)  |
+
+### exec:ed-on-bls12-381-mul-affine-sw:default
+
+|        | `2157674_bytes`            |
+|:-------|:-------------------------- |
+|        | `620.88 us` (✅ **1.00x**)  |
+
+### exec:ed-on-bls12-381-mul-affine-te:default
+
+|        | `2149670_bytes`            |
+|:-------|:-------------------------- |
+|        | `626.22 us` (✅ **1.00x**)  |
+
+### exec:ed-on-bls12-381-mul-projective-sw:default
+
+|        | `2158557_bytes`            |
+|:-------|:-------------------------- |
+|        | `661.09 us` (✅ **1.00x**)  |
+
+### exec:ed-on-bls12-381-mul-projective-te:default
+
+|        | `2150657_bytes`            |
+|:-------|:-------------------------- |
+|        | `611.47 us` (✅ **1.00x**)  |
+
+### exec:ed-on-bls12-377-mul-affine:default
+
+|        | `2149855_bytes`            |
+|:-------|:-------------------------- |
+|        | `797.90 us` (✅ **1.00x**)  |
+
+### exec:ed-on-bls12-377-mul-projective:default
+
+|        | `2150847_bytes`            |
+|:-------|:-------------------------- |
+|        | `782.71 us` (✅ **1.00x**)  |
+
+### exec:ed-on-bls12-377-msm-10:default
+
+|        | `2166342_bytes`           |
+|:-------|:------------------------- |
+|        | `14.16 ms` (✅ **1.00x**)  |
+
+### exec:ed-on-bls12-377-msm-1000:default
+
+|        | `2164134_bytes`            |
+|:-------|:-------------------------- |
+|        | `659.94 ms` (✅ **1.00x**)  |
 
 ---
 Made with [criterion-table](https://github.com/nu11ptr/criterion-table)
