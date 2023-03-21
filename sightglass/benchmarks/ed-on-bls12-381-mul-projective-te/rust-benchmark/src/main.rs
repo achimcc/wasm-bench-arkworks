@@ -10,7 +10,7 @@ use ed_on_bls12_381::do_mul_projective_te;
 fn main() {
     let (base, scalar) = generate_scalar_args::<ark_ed_on_bls12_381::EdwardsProjective>();
     bench::start();
-    let result = do_mul_projective_te(&base, scalar);
+    let result = do_mul_projective_te(&base, &[scalar]);
     bench::end();
     assert_eq!(result.unwrap(), ());
 }
