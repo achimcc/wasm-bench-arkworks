@@ -10,7 +10,7 @@ use ed_on_bls12_381::do_mul_affine_sw;
 fn main() {
     let (base, scalar) = generate_scalar_args::<ark_ed_on_bls12_381::SWAffine>();
     bench::start();
-    let result = do_mul_affine_sw(&base, &[scalar]);
+    let result = do_mul_affine_sw(&base, scalar);
     bench::end();
     assert_eq!(result.unwrap(), ());
 }
