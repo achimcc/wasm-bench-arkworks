@@ -3,7 +3,6 @@
 use sightglass_api as bench;
 mod utils;
 use utils::generate_scalar_args;
-use ark_ec::CurveGroup;
 use ark_std::io::Error;
 
 fn do_mul_projective_g1(
