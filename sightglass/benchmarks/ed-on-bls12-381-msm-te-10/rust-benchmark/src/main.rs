@@ -20,7 +20,7 @@ fn main() {
     let (bases, scalars) = generate_msm_args::<ark_ed_on_bls12_381::EdwardsProjective>(10);
     let bases = bases.iter().map(|base| base.into_affine()).collect::<Vec<_>>();
     bench::start();
-    let result = ed_on_bls12_381::do_msm_te(&bases[..], &scalars[..]);
+    let result = do_msm_te(&bases[..], &scalars[..]);
     bench::end();
     assert_eq!(result.unwrap(), ());
 }

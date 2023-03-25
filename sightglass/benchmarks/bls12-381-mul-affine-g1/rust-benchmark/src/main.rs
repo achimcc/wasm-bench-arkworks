@@ -18,7 +18,7 @@ fn do_mul_affine_g1(
 fn main() {
     let (base, scalar) = generate_scalar_args::<ark_ec::short_weierstrass::Affine<ark_bls12_381::g1::Config>>();
     bench::start();
-    let result = bls12_381::do_mul_affine_g1(&base, &[scalar]);
+    let result = do_mul_affine_g1(&base, &[scalar]);
     bench::end();
     assert_eq!(result.unwrap(), ());
 }
