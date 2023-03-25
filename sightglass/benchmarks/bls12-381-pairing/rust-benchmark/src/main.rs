@@ -1,11 +1,14 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
-mod bls12_381;
 mod utils;
 use sightglass_api as bench;
 use utils::generate_pairing_args;
-use ark_ec::CurveGroup;
-use bls12_381::do_pairing;
+use ark_std::io::Error;
+
+fn do_pairing(a: ark_bls12_381::G1Affine, b: ark_bls12_381::G2Affine) -> Result<(), Error> {
+	let _ = ark_bls12_381::Bls12_381::multi_pairing([a], [b]);
+	Ok(())
+}
 
 fn main() {
     let (a, b) = generate_pairing_args::<ark_bls12_381::G1Affine, ark_bls12_381::G2Affine>();

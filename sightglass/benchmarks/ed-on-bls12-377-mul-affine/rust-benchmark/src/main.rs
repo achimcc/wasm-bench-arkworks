@@ -2,10 +2,21 @@
 
 use sightglass_api as bench;
 mod utils;
-mod ed_on_bls12_377;
 use utils::generate_scalar_args;
-use ark_ec::CurveGroup;
-use ed_on_bls12_377::do_mul_affine;
+use ark_std::io::Error;
+use ark_ec::models::twisted_edwards::TECurveConfig;
+
+fn do_mul_affine(
+	base: &ark_ed_on_bls12_377::EdwardsAffine,
+	scalar: &[u64],
+) -> Result<(), Error> {
+	let _out =
+		<ark_ed_on_bls12_377::EdwardsConfig as TECurveConfig>::mul_affine(
+			base,
+			scalar,
+		);
+	Ok(())
+}
 
 fn main() {
     let (base, scalar)=generate_scalar_args::<ark_ec::twisted_edwards::Affine<ark_ed_on_bls12_377::EdwardsConfig>>();

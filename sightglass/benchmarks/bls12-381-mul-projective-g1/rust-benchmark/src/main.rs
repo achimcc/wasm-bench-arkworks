@@ -1,11 +1,20 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
-mod bls12_381;
 mod utils;
 use sightglass_api as bench;
 use utils::generate_scalar_args;
-use ark_ec::CurveGroup;
-use bls12_381::do_mul_projective_g1;
+use ark_std::io::Error;
+
+fn do_mul_projective_g1(
+	base: &ark_ec::short_weierstrass::Projective<ark_bls12_381::g1::Config>,
+	scalar: &[u64],
+) -> Result<(), Error> {
+	let _out =
+		<ark_bls12_381::g1::Config as ark_ec::short_weierstrass::SWCurveConfig>::mul_projective(
+			base, scalar,
+		);
+	Ok(())
+}
 
 fn main() {
     let (base, scalar) = generate_scalar_args::<ark_ec::short_weierstrass::Projective<ark_bls12_381::g1::Config>>();

@@ -2,10 +2,20 @@
 
 use sightglass_api as bench;
 mod utils;
-mod ed_on_bls12_377;
 use utils::generate_msm_args;
-use ark_ec::CurveGroup;
-use ed_on_bls12_377::do_msm;
+use ark_std::{io::Error, vec::Vec};
+use ark_ec::models::twisted_edwards::TECurveConfig;
+
+fn do_msm(
+	bases: &[ark_ec::twisted_edwards::Affine<ark_ed_on_bls12_377::EdwardsConfig>],
+	scalars: &[<ark_ed_on_bls12_377::EdwardsConfig as ark_ec::CurveConfig>::ScalarField],
+) -> Result<(), Error> {
+	let _out =
+		<ark_ed_on_bls12_377::EdwardsConfig as TECurveConfig>::msm(
+			bases, scalars,
+		);
+	Ok(())
+}
 
 fn main() {
     let (bases, scalars) = generate_msm_args::<ark_ed_on_bls12_377::EdwardsProjective>(10);

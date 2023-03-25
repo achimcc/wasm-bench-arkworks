@@ -1,11 +1,18 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
 mod utils;
-mod bls12_377;
 use sightglass_api as bench;
 use utils::generate_msm_args;
-use ark_ec::CurveGroup;
-use bls12_377::do_msm_g1;
+use ark_ec::short_weierstrass::SWCurveConfig;
+use ark_std::{io::Error, vec::Vec};
+
+fn do_msm_g1(
+	bases: &[ark_ec::short_weierstrass::Affine<ark_bls12_377::g1::Config>],
+	scalars: &[<ark_bls12_377::g1::Config as ark_ec::CurveConfig>::ScalarField],
+) -> Result<(), Error> {
+	let _out = <ark_bls12_377::g1::Config as SWCurveConfig>::msm(bases, scalars);
+	Ok(())
+}
 
 fn main() {
     let (bases, scalars) = generate_msm_args::<ark_ec::short_weierstrass::Projective<ark_bls12_377::g1::Config>>(1000);

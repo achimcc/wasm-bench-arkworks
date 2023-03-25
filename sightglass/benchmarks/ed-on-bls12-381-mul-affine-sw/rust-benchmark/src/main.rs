@@ -2,10 +2,14 @@
 
 use sightglass_api as bench;
 mod utils;
-mod ed_on_bls12_381;
 use utils::generate_scalar_args;
-use ark_ec::CurveGroup;
-use ed_on_bls12_381::do_mul_affine_sw;
+use ark_std::io::Error;
+use ark_ec::short_weierstrass::SWCurveConfig;
+
+fn do_mul_affine_sw(base: &ark_ed_on_bls12_381::SWAffine, scalar: &[u64]) -> Result<(), Error> {
+	let _out = <ark_ed_on_bls12_381::EdwardsConfig as SWCurveConfig>::mul_affine(&base, scalar);
+	Ok(())
+}
 
 fn main() {
     let (base, scalar) = generate_scalar_args::<ark_ed_on_bls12_381::SWAffine>();
