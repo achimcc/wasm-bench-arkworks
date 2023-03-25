@@ -10,7 +10,7 @@ fn do_msm_g2(
 	bases: &[ark_ec::short_weierstrass::Affine<ark_bw6_761::g2::Config>],
 	scalars: &[<ark_bw6_761::g2::Config as ark_ec::CurveConfig>::ScalarField],
 ) -> Result<(), Error> {
-	let _out = <ark_bw6_761::g2::Config as SWCurveConfig>::msm(bases, scalars);
+	let _out = <ark_bw6_761::g2::Config as ark_ec::short_weierstrass::SWCurveConfig>::msm(bases, scalars);
 
 	Ok(())
 }

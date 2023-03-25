@@ -3,14 +3,14 @@
 mod utils;
 use sightglass_api as bench;
 use utils::generate_msm_args;
-use ark_ec::{short_weierstrass::SWCurveConfig, CurveGroup};
+use ark_ec::CurveGroup;
 use ark_std::{io::Error, vec::Vec};
 
 fn do_msm_g1(
 	bases: &[ark_ec::short_weierstrass::Affine<ark_bls12_377::g1::Config>],
 	scalars: &[<ark_bls12_377::g1::Config as ark_ec::CurveConfig>::ScalarField],
 ) -> Result<(), Error> {
-	let _out = <ark_bls12_377::g1::Config as SWCurveConfig>::msm(bases, scalars);
+	let _out = <ark_bls12_377::g1::Config as ark_ec::short_weierstrass::SWCurveConfig>::msm(bases, scalars);
 	Ok(())
 }
 

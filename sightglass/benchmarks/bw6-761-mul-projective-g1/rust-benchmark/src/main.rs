@@ -3,14 +3,14 @@
 use sightglass_api as bench;
 mod utils;
 use utils::generate_scalar_args;
-use ark_ec::{short_weierstrass::SWCurveConfig, CuveGroup};
+use ark_ec::CurveGroup;
 use ark_std::io::Error;
 
 fn do_mul_projective_g1(
 	base: &ark_ec::short_weierstrass::Projective<ark_bw6_761::g1::Config>,
 	scalar: &[u64],
 ) -> Result<(), Error> {
-	let _out = <ark_bw6_761::g1::Config as SWCurveConfig>::mul_projective(&base, scalar);
+	let _out = <ark_bw6_761::g1::Config as ark_ec::short_weierstrass::SWCurveConfig>::mul_projective(&base, scalar);
 	Ok(())
 }
 
