@@ -10,7 +10,7 @@ pub fn do_pairing(a: ark_bls12_381::G1Affine, b: ark_bls12_381::G2Affine) -> Res
 
 pub fn do_msm_g1(
 	bases: &[ark_ec::short_weierstrass::Affine<ark_bls12_381::g1::Config>],
-	scalars: &[<ark_bls12_381::g1::Config as CurveConfig>::ScalarField],
+	scalars: &[<ark_bls12_381::g1::Config as ark_ec::CurveConfig>::ScalarField],
 ) -> Result<(), Error> {
 	let _out = <ark_bls12_381::g1::Config as ark_ec::models::short_weierstrass::SWCurveConfig>::msm(
 		bases, scalars,
@@ -20,7 +20,7 @@ pub fn do_msm_g1(
 
 pub fn do_msm_g2(
 	bases: &[ark_ec::short_weierstrass::Affine<ark_bls12_381::g2::Config>],
-	scalars: &[<ark_bls12_381::g2::Config as CurveConfig>::ScalarField],
+	scalars: &[<ark_bls12_381::g2::Config as ark_ec::CurveConfig>::ScalarField],
 ) -> Result<(), Error> {
 	let _out = <ark_bls12_381::g2::Config as ark_ec::short_weierstrass::SWCurveConfig>::msm(
 		bases, scalars,

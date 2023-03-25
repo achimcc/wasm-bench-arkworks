@@ -3,7 +3,7 @@
 use sightglass_api as bench;
 mod utils;
 use utils::generate_scalar_args;
-use ark_ec::short_weierstrass::SWCurveConfig;
+use ark_ec::{short_weierstrass::SWCurveConfig, CuveGroup};
 use ark_std::io::Error;
 
 fn do_mul_projective_g1(

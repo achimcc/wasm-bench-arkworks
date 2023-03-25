@@ -3,7 +3,7 @@
 mod utils;
 use sightglass_api as bench;
 use utils::generate_msm_args;
-use ark_ec::short_weierstrass::SWCurveConfig;
+use ark_ec::{short_weierstrass::SWCurveConfig, CurveGroup};
 use ark_std::{io::Error, vec::Vec};
 
 fn do_msm_g1(

@@ -4,7 +4,7 @@ use sightglass_api as bench;
 mod utils;
 use utils::generate_msm_args;
 use ark_std::{io::Error, vec::Vec};
-use ark_ec::models::twisted_edwards::TECurveConfig;
+use ark_ec::{models::twisted_edwards::TECurveConfig, CurveGroup};
 
 fn do_msm(
 	bases: &[ark_ec::twisted_edwards::Affine<ark_ed_on_bls12_377::EdwardsConfig>],

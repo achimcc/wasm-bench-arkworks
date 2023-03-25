@@ -4,7 +4,7 @@ use sightglass_api as bench;
 mod utils;
 use utils::generate_msm_args;
 use ark_std::{io::Error, vec::Vec};
-use ark_ec::short_weierstrass::SWCurveConfig;
+use ark_ec::{short_weierstrass::SWCurveConfig, CurveGroup};
 
 fn do_msm_sw(
 	bases: &[ark_ec::short_weierstrass::Affine<ark_ed_on_bls12_381::SWConfig>],

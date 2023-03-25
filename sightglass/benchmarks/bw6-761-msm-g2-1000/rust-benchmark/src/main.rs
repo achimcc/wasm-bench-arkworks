@@ -4,6 +4,7 @@ use sightglass_api as bench;
 mod utils;
 use utils::generate_msm_args;
 use ark_std::{io::Error, vec::Vec};
+use ark_ec::CurveGroup;
 
 fn do_msm_g2(
 	bases: &[ark_ec::short_weierstrass::Affine<ark_bw6_761::g2::Config>],
