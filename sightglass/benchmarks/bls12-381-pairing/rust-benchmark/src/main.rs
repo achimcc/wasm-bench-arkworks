@@ -4,7 +4,7 @@ mod utils;
 use sightglass_api as bench;
 use utils::generate_pairing_args;
 use ark_std::io::Error;
-pub use ark_ec::pairing::Pairing;
+use ark_ec::pairing::Pairing;
 
 fn do_pairing(a: ark_bls12_381::G1Affine, b: ark_bls12_381::G2Affine) -> Result<(), Error> {
 	let _ = ark_bls12_381::Bls12_381::multi_pairing([a], [b]);
