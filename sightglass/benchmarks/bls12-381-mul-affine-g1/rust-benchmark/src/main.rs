@@ -3,7 +3,7 @@
 mod utils;
 use sightglass_api as bench;
 use utils::generate_scalar_args;
-use ark_std::{io::Error, vec::Vec};
+use ark_std::io::Error;
 
 fn do_mul_affine_g1(
 	base: &ark_ec::short_weierstrass::Affine<ark_bls12_381::g1::Config>,
