@@ -1,0 +1,21 @@
+[package]
+name = "ed-on-bls12-381-msm-te-10"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sightglass-api = "0.1"
+ark-ed-on-bls12-381-bandersnatch = { version = "0.4.0", default-features = false }
+ark-ec = { version = "0.4.0", default-features = false }
+ark-ff = { version = "0.4.0", default-features = false }
+ark-std = { version = "0.4.0", default-features = false }
+
+
+[features]
+default = [ "std" ]
+std = [
+	"ark-ed-on-bls12-381-bandersnatch/std",
+	"ark-ec/std",
+	"ark-ff/std",
+	"ark-std/std"
+]
