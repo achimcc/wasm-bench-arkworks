@@ -6,10 +6,10 @@ use utils::generate_scalar_args;
 use ark_std::io::Error;
 
 fn do_mul_projective_te(
-	base: &ark_ec::twisted_edwards::Projective<ark_ed_on_bls12_381_bandersnatch::JubjubConfig>,
+	base: &ark_ec::twisted_edwards::Projective<ark_ed_on_bls12_381_bandersnatch::BandersnatchConfig>,
 	scalar: &[u64],
 ) -> Result<(), Error> {
-	let _out = <ark_ed_on_bls12_381_bandersnatch::EdwardsConfig as ark_ec::twisted_edwards::TECurveConfig>::mul_projective(
+	let _out = <ark_ed_on_bls12_381_bandersnatch::BandersnatchConfig as ark_ec::twisted_edwards::TECurveConfig>::mul_projective(
 		base,
 		scalar,
 	);

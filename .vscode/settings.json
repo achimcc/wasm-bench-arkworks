@@ -1,6 +1,7 @@
 {
     "codegpt.apiKey": "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",
     "rust-analyzer.linkedProjects": [
-        "./sightglass/benchmarks/ed-on-bls12-381-bandersnatch-msm-te-1000/rust-benchmark/Cargo.toml"
+        "./sightglass/benchmarks/ed-on-bls12-381-bandersnatch-msm-te-1000/rust-benchmark/Cargo.toml",
+        "./sightglass/benchmarks/ed-on-bls12-381-bandersnatch-mul-projective-te/rust-benchmark/Cargo.toml"
     ]
 }
